@@ -1,9 +1,5 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
 var _defineProperty2 = require("babel-runtime/helpers/defineProperty");
 
 var _defineProperty3 = _interopRequireDefault(_defineProperty2);
@@ -48,4 +44,4 @@ const node = tag => {
 
 const nodes = (0, _ramda.map)(node, tags);
 
-exports["default"] = (0, _ramda.mergeAll)(nodes);
+module.exports = (0, _ramda.mergeAll)(nodes);

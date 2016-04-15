@@ -202,4 +202,4 @@ const node = (tag) => {
 
 const nodes = map(node, tags)
 
-export default mergeAll(nodes)
+module.exports = mergeAll(nodes)

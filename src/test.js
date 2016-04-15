@@ -1,36 +1,34 @@
 import {describe, describe as context, it} from "mocha"
 import {expect} from "chai"
-import src from "../src"
+import * as src from "../src"
+import {img} from "../src"
+import {a} from "../src"
 
 describe("src/index.js", () => {
   context("when asked for a void element", () => {
-    const voidelement = src.img
-
     context("and called with content", () => {
       it("throws an error", () => {
-        expect(() => voidelement({content: "Test"})).to.throw("No content is allowed on void element like <img>")
+        expect(() => img({content: "Test"})).to.throw("No content is allowed on void element like <img>")
       })
     })
   })
 
   context("when asked for any element", () => {
-    const element = src.a
-
     context("and called with selector", () => {
       it("returns an object with the given selector in the .sel property appended to the element", () => {
-        expect(element({selector: ".value"})).to.have.property("sel", "a.value")
+        expect(a({selector: ".value"})).to.have.property("sel", "a.value")
       })
     })
 
     context("and called with content", () => {
       it("returns an object with the given content in the .text property", () => {
-        expect(element({content: "test"})).to.have.property("text", "test")
+        expect(a({content: "test"})).to.have.property("text", "test")
       })
     })
 
     context("and called with aria", () => {
       it("returns an object with the given aria on in the .data property", () => {
-        expect(element({aria: {id: "1"}})).to.have.deep.property("data.aria.id", "1")
+        expect(a({aria: {id: "1"}})).to.have.deep.property("data.aria.id", "1")
       })
     })
   })
@@ -178,7 +176,9 @@ describe("src/index.js", () => {
       "var",
       "video",
       "wbr",
-      "xmp"
+      "xmp",
+      "default"
+      // Exports!
     ])
   })
 })
