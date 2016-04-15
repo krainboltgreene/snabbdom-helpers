@@ -3,7 +3,6 @@
 [![Quality](http://img.shields.io/codeclimate/github/krainboltgreene/snabbdom-helpers.svg?style=flat-square)](https://codeclimate.com/github/krainboltgreene/snabbdom-helpers)
 [![Coverage](http://img.shields.io/codeclimate/coverage/github/krainboltgreene/snabbdom-helpers.svg?style=flat-square)](https://codeclimate.com/github/krainboltgreene/snabbdom-helpers)
 [![Build](http://img.shields.io/travis-ci/krainboltgreene/snabbdom-helpers.svg?style=flat-square)](https://travis-ci.org/krainboltgreene/snabbdom-helpers)
-[![Dependencies](http://img.shields.io/gemnasium/krainboltgreene/snabbdom-helpers.svg?style=flat-square)](https://gemnasium.com/krainboltgreene/snabbdom-helpers)
 [![Releases](http://img.shields.io/github/release/krainboltgreene/snabbdom-helpers.svg?style=flat-square)](http://github.com/krainboltgreene/snabbdom-helpers/releases)
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 

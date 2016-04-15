@@ -4,7 +4,7 @@
   "description": "Individual HTML helper functions for the snabbdom library",
   "main": "dist/index.js",
   "scripts": {
-    "start": "babel './src/index.js' --out-file './dist/index.js'",
+    "build": "babel './src/index.js' --out-file './dist/index.js'",
     "test": "mocha --compilers js:babel-register './src/**/test.js'",
     "lint": "eslint './src/'"
   },
