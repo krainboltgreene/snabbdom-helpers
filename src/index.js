@@ -6,10 +6,21 @@ import {mergeAll} from "ramda"
 import {contains} from "ramda"
 
 const voids = [
+  "area",
+  "base",
   "br",
+  "col",
+  "command",
   "hr",
   "img",
-  "meta"
+  "input",
+  "keygen",
+  "link",
+  "meta",
+  "param",
+  "source",
+  "track",
+  "wbr"
 ]
 const tags = [
   "a",
@@ -64,6 +75,12 @@ const tags = [
   "form",
   "frame",
   "frameset",
+  "h1",
+  "h2",
+  "h3",
+  "h4",
+  "h5",
+  "h6",
   "head",
   "header",
   "hgroup",
