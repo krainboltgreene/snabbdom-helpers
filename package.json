@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/krainboltgreene/hyperscript-wrappers.git"
+    "url": "git+https://github.com/krainboltgreene/snabbdom-helpers.git"
   },
   "keywords": [
     "html",
@@ -20,9 +20,9 @@
   "author": "Kurtis Rainbolt-Greene <me@kurtisrainboltgreene.name> (@krainboltgreene)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/krainboltgreene/hyperscript-wrappers/issues"
+    "url": "https://github.com/krainboltgreene/snabbdom-helpers/issues"
   },
-  "homepage": "https://github.com/krainboltgreene/hyperscript-wrappers#readme",
+  "homepage": "https://github.com/krainboltgreene/snabbdom-helpers#readme",
   "devDependencies": {
     "babel-eslint": "6.0.2",
     "chai": "3.5.0",
