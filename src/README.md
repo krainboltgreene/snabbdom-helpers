@@ -10,7 +10,7 @@ import {main} from "snabbdom-helpers"
 main() // <main></main>
 ```
 
-To give values to these tags simply pass them as keys on the object, where certain keys are special like `selector`. Selector allows you to easily define the dom selector of the element, with the CSS id and class syntax:
+To give values to these tags simply pass them as keys on the object, where certain keys are special like `selector`. Selector allows you to easily define the DOM selector of the element, with the CSS id and class syntax:
 
 ``` javascript
 import {p} from "snabbdom-helpers"
