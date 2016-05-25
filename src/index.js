@@ -175,7 +175,7 @@ const node = (tag) => {
   const withTag = concat(tag)
 
   if (contains(tag, voids)) {
-    const warning = `No content is allowed on void element like <${tag}>`
+    const warning = `No content allowed in void element <${tag}>`
 
     return {
       [tag]: (properties = EMPTY_OBJECT) => {

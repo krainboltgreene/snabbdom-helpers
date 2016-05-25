@@ -8,7 +8,7 @@ describe("src/index.js", () => {
   context("when asked for a void element", () => {
     context("and called with inner", () => {
       it("throws an error", () => {
-        expect(() => img({inner: "Test"})).to.throw("No content is allowed on void element like <img>")
+        expect(() => img({inner: "Test"})).to.throw("No content allowed in void element <img>")
       })
     })
   })
