@@ -10,7 +10,7 @@ import {main} from "snabbdom-helpers"
 main() // <main></main>
 ```
 
-To give values to these tags simply pass them as keys on the object, where certain keys are special like `selector`. Selector allows you to easily define the dom selector of the element, with the CSS id and class syntax:
+To give values to these tags simply pass them as keys on the object, where certain keys are special like `selector`. Selector allows you to easily define the DOM selector of the element, with the CSS id and class syntax:
 
 ``` javascript
 import {p} from "snabbdom-helpers"
@@ -34,11 +34,11 @@ Content is either a String (of text) or an Array of Nodes and/or String:
 import {p} from "snabbdom-helpers"
 
 article({
-  content: "I'm fun!"
+  inner: "I'm fun!"
 }) // <article>I'm fun!</article>
 article({
-  content: [
-    h1({content: "Hello"})
+  inner: [
+    h1({inner: "Hello"})
     "world"
   ]
 }) // <article><h1>Hello</h1>world</article>
@@ -57,7 +57,7 @@ If you give a void element any content it will throw an error:
 ``` javascript
 import {meta} from "snabbdom-helpers"
 
-meta({content: "Hello!"}) // Error: No content is allowed on void element like <meta>
+meta({inner: "Hello!"}) // Error: No content is allowed on void element like <meta>
 ```
 
 Finally you can give any other attributes to your element:

@@ -19,12 +19,12 @@ import {p} from "snabbdom-helpers"
 
 const newVirtualDom = article({
   data: {id: "1"},
-  content: [
+  inner: [
     h1({
       style: {color: "blue"},
-      content: "Hello"
+      inner: "Hello"
     }),
-    p({selector: ".red.body", content: "World!"})
+    p({selector: ".red.body", inner: "World!"})
   ]
 })
 
