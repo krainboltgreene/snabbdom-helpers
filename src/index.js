@@ -169,7 +169,7 @@ const tags = [
 
 const EMPTY_OBJECT = {}
 const EMTPY_STRING = ""
-const withoutSpecial = omit(["selector", "content"])
+const withoutSpecial = omit(["selector", "inner"])
 
 const node = (tag) => {
   const withTag = concat(tag)
@@ -179,7 +179,7 @@ const node = (tag) => {
 
     return {
       [tag]: (properties = EMPTY_OBJECT) => {
-        if (properties.content) {
+        if (properties.inner) {
           throw new Error(warning)
         }
 
@@ -195,7 +195,7 @@ const node = (tag) => {
     [tag]: (properties = EMPTY_OBJECT) => dom(
       withTag(properties.selector || EMTPY_STRING),
       withoutSpecial(properties),
-      properties.content || EMTPY_STRING
+      properties.inner || EMTPY_STRING
     )
   }
 }

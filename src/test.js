@@ -6,9 +6,9 @@ import {a} from "../src"
 
 describe("src/index.js", () => {
   context("when asked for a void element", () => {
-    context("and called with content", () => {
+    context("and called with inner", () => {
       it("throws an error", () => {
-        expect(() => img({content: "Test"})).to.throw("No content is allowed on void element like <img>")
+        expect(() => img({inner: "Test"})).to.throw("No content is allowed on void element like <img>")
       })
     })
   })
@@ -20,9 +20,9 @@ describe("src/index.js", () => {
       })
     })
 
-    context("and called with content", () => {
-      it("returns an object with the given content in the .text property", () => {
-        expect(a({content: "test"})).to.have.property("text", "test")
+    context("and called with inner", () => {
+      it("returns an object with the given inner in the .text property", () => {
+        expect(a({inner: "test"})).to.have.property("text", "test")
       })
     })
 
