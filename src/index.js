@@ -200,6 +200,4 @@ const node = (tag) => {
   }
 }
 
-const nodes = map(node, tags)
-
-module.exports = mergeAll(nodes)
+module.exports = mergeAll(map(node, tags))
