@@ -1,9 +1,9 @@
 import dom from "snabbdom/h"
-import {omit} from "ramda"
-import {map} from "ramda"
 import {concat} from "ramda"
-import {mergeAll} from "ramda"
 import {contains} from "ramda"
+import {map} from "ramda"
+import {mergeAll} from "ramda"
+import {omit} from "ramda"
 
 const voids = [
   "area",
