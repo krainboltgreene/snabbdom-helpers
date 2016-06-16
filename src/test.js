@@ -1,8 +1,16 @@
 import {describe, describe as context, it} from "mocha"
 import {expect} from "chai"
+import snabbdomToHTMLInit from "snabbdom-to-html/lib/init"
+import snabbdomToHTMLAttributes from "snabbdom-to-html/lib/modules/attributes"
+import snabbdomToHTMLStyle from "snabbdom-to-html/lib/modules/attributes"
 import * as src from "../src"
 import {img} from "../src"
 import {a} from "../src"
+
+const toHTML = snabbdomToHTMLInit([
+  snabbdomToHTMLAttributes,
+  snabbdomToHTMLStyle
+])
 
 describe("src/index.js", () => {
   context("when asked for a void element", () => {
@@ -15,20 +23,32 @@ describe("src/index.js", () => {
 
   context("when asked for any element", () => {
     context("and called with selector", () => {
-      it("returns an object with the given selector in the .sel property appended to the element", () => {
-        expect(a({selector: ".value"})).to.have.property("sel", "a.value")
+      it("returns HTML with a class selector", () => {
+        expect(toHTML(a({selector: ".value"}))).to.equal("<a class=\"value\"></a>")
       })
     })
 
     context("and called with inner", () => {
-      it("returns an object with the given inner in the .text property", () => {
-        expect(a({inner: "test"})).to.have.property("text", "test")
+      it("returns HTML with the given inner in the .text property", () => {
+        expect(toHTML(a({inner: "test"}))).to.equal("<a>test</a>")
       })
     })
 
-    context("and called with aria", () => {
-      it("returns an object with the given aria on in the .data property", () => {
-        expect(a({aria: {id: "1"}})).to.have.deep.property("data.aria.id", "1")
+    context("and called with aria microformat", () => {
+      it("returns HTML with the given aria-id property", () => {
+        expect(toHTML(a({aria: {id: "1"}}))).to.equal("<a aria-id=\"1\"></a>")
+      })
+    })
+
+    context("and called with data microformat", () => {
+      it("returns HTML with the given data-id property", () => {
+        expect(toHTML(a({data: {id: "1"}}))).to.equal("<a data-id=\"1\"></a>")
+      })
+    })
+
+    context("and called with style property", () => {
+      it("returns HTML with the given style property", () => {
+        expect(toHTML(a({style: {"background-color": "red"}}))).to.equal("<a style=\"background-color: red;\"></a>")
       })
     })
   })

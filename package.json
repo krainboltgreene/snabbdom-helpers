@@ -4,7 +4,7 @@
   "description": "Individual HTML helper functions for the snabbdom library",
   "main": "dist/index.js",
   "scripts": {
-    "build": "babel './src/index.js' --out-file './dist/index.js'",
+    "build": "babel './src/index.js' --out-file './transpiled/index.js'",
     "test": "mocha --compilers js:babel-register './src/**/test.js'",
     "lint": "eslint './src/'",
     "watch": "npm-run-all --parallel watch:build watch:test watch:lint",
@@ -59,11 +59,12 @@
     "babel-plugin-transform-runtime": "^6",
     "babel-root-import": "^3",
     "chai": "^3",
-    "chokidar-cli": "^1.2.0",
+    "chokidar-cli": "^1",
     "eslint": "^2",
     "eslint-plugin-babel": "^3",
     "mocha": "^2",
-    "npm-run-all": "^2.1.1"
+    "npm-run-all": "^2",
+    "snabbdom-to-html": "^2"
   },
   "dependencies": {
     "ramda": "0.21.0",

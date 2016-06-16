@@ -6,7 +6,6 @@
 
 # Regenerable files
 /node_modules/
-/transpiled/
 
 # Temporary files
 /tmp

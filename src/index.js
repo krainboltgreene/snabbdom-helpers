@@ -1,9 +1,11 @@
-import dom from "snabbdom/h"
 import {concat} from "ramda"
 import {contains} from "ramda"
 import {map} from "ramda"
+import {merge} from "ramda"
 import {mergeAll} from "ramda"
 import {omit} from "ramda"
+import {pick} from "ramda"
+import dom from "snabbdom/h"
 
 const voids = [
   "area",
@@ -169,9 +171,25 @@ const tags = [
 
 const EMPTY_OBJECT = {}
 const EMTPY_STRING = ""
-const withoutSpecial = omit(["selector", "inner"])
+const HELPER_FIELD_KEYS = ["selector", "inner"]
+const SNABBDOM_MODULE_KEYS = ["attrs", "on", "style", "class"]
+const withoutHelperFields = omit(HELPER_FIELD_KEYS)
+const withoutSnabbdomModules = omit(SNABBDOM_MODULE_KEYS)
+const withSnabbdomModules = pick(SNABBDOM_MODULE_KEYS)
 
-const node = (tag) => {
+function attributes (properties) {
+  return merge(
+    withSnabbdomModules(properties),
+    {
+      props: merge(
+        withoutSnabbdomModules(properties),
+        properties.props
+      )
+    }
+  )
+}
+
+module.exports = mergeAll(map(function node (tag) {
   const withTag = concat(tag)
 
   if (contains(tag, voids)) {
@@ -185,19 +203,19 @@ const node = (tag) => {
 
         return dom(
           withTag(properties.selector || EMTPY_STRING),
-          withoutSpecial(properties)
+          attributes(properties)
         )
       }
     }
   }
 
   return {
-    [tag]: (properties = EMPTY_OBJECT) => dom(
-      withTag(properties.selector || EMTPY_STRING),
-      withoutSpecial(properties),
-      properties.inner || EMTPY_STRING
-    )
+    [tag]: (properties = EMPTY_OBJECT) => {
+      return dom(
+        withTag(properties.selector || EMTPY_STRING),
+        attributes(withoutHelperFields(properties)),
+        properties.inner || EMTPY_STRING
+      )
+    }
   }
-}
-
-module.exports = mergeAll(map(node, tags))
+}, tags))
