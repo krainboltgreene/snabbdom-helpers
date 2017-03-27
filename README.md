@@ -1,5 +1,7 @@
 # snabbdom-helpers
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/krainboltgreene/snabbdom-helpers.svg)](https://greenkeeper.io/)
+
 [![Quality](http://img.shields.io/codeclimate/github/krainboltgreene/snabbdom-helpers.svg?style=flat-square)](https://codeclimate.com/github/krainboltgreene/snabbdom-helpers)
 [![Coverage](http://img.shields.io/codeclimate/coverage/github/krainboltgreene/snabbdom-helpers.svg?style=flat-square)](https://codeclimate.com/github/krainboltgreene/snabbdom-helpers)
 [![Build](http://img.shields.io/travis-ci/krainboltgreene/snabbdom-helpers.svg?style=flat-square)](https://travis-ci.org/krainboltgreene/snabbdom-helpers)
