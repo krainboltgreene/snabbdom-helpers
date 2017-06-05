@@ -2,15 +2,6 @@
   "name": "snabbdom-helpers",
   "version": "3.0.0",
   "description": "Individual HTML helper functions for the snabbdom library",
-  "main": "dist/index.js",
-  "scripts": {
-    "prepublish": "npm run build",
-    "build": "babel './source/**/*.js' -d './transpiled/'",
-    "pretest": "npm run build",
-    "test": "tap './transpiled/**/test.js'",
-    "lint": "eslint './source/'",
-    "check": "flow check"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/krainboltgreene/snabbdom-helpers.git"
@@ -26,6 +17,15 @@
     "url": "https://github.com/krainboltgreene/snabbdom-helpers/issues"
   },
   "homepage": "https://github.com/krainboltgreene/snabbdom-helpers#readme",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "babel './source/**/*.js' -d './transpiled/'",
+    "pretest": "npm run build",
+    "test": "tap './transpiled/**/test.js'",
+    "lint": "eslint './source/'",
+    "check": "flow check"
+  },
   "devDependencies": {
     "babel-cli": "6.24.1",
     "babel-core": "6.24.1",
