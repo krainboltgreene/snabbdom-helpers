@@ -1,6 +1,6 @@
 {
   "name": "snabbdom-helpers",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Individual HTML helper functions for the snabbdom library",
   "repository": {
     "type": "git",
