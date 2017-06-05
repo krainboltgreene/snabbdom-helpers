@@ -6,12 +6,14 @@
 
 # Regenerable files
 /node_modules/
+/flow-typed/npm/
+/transpiled/
 
 # Temporary files
-/tmp
+/tmp/
 
 # Log files
 /*.log
 
 # Sensitive files
-/.env*
+/.env
