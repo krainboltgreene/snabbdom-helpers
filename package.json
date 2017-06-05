@@ -44,7 +44,7 @@
     "npm-run-all": "4.0.2"
   },
   "dependencies": {
-    "snabbdom": "0.4.2"
-    "ramda": "0.23.0",
+    "snabbdom": "0.4.2",
+    "ramda": "0.23.0"
   }
 }
