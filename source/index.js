@@ -171,16 +171,16 @@ const EMPTY_OBJECT = {}
 const EMTPY_STRING = ""
 const withoutSpecial = omit(["selector", "inner"])
 
-const node = (tag) => {
+module.exports = mergeAll(map(function node (tag: string): object {
   const withTag = concat(tag)
 
-  if (contains(tag, voids)) {
-    const warning = `No content allowed in void element <${tag}>`
+  if (contains(tag)(voids)) {
+    const warning = `No inner allowed in void element <${tag}>`
 
     return {
-      [tag]: (properties = EMPTY_OBJECT) => {
+      [tag]: (properties: {selector: string, inner?: string} = EMPTY_OBJECT): [string, object] => {
         if (properties.inner) {
-          throw new Error(warning)
+          console.warn(warning)
         }
 
         return dom(
@@ -192,12 +192,10 @@ const node = (tag) => {
   }
 
   return {
-    [tag]: (properties = EMPTY_OBJECT) => dom(
+    [tag]: (properties: {selector: string, inner?: string} = EMPTY_OBJECT): [string, object, string] => dom(
       withTag(properties.selector || EMTPY_STRING),
       withoutSpecial(properties),
       properties.inner || EMTPY_STRING
     )
   }
-}
-
-module.exports = mergeAll(map(node, tags))
+})(tags))
