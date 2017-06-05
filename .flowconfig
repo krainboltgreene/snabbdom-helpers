@@ -1,0 +1,13 @@
+[ignore]
+.*/node_modules/.*
+.*/\.git/.*
+<PROJECT_ROOT>/transpiled/.*
+
+[include]
+./source/
+
+[libs]
+flow-typed
+
+[options]
+all=true
