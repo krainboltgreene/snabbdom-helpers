@@ -10,6 +10,129 @@ A set of functions that map the entire list of the W3C DOM elements. Each functi
 
 ## using
 
+This export will return a list of functions, where each function was created from a partially applied curry. Each function represents a tag in the list of W3C allowed tags, including deprecated, and experimental.
+
+Each tag takes an optional object as an argument. If no value is given it functions like so:
+
+``` javascript
+import {main} from "snabbdom-helpers"
+
+main() // <main></main>
+```
+
+To give values to these tags simply pass them as keys on the object, where certain keys are special like `selector`. Selector allows you to easily define the DOM selector of the element, with the CSS id and class syntax:
+
+``` javascript
+import {p} from "snabbdom-helpers"
+
+p({
+  selector: "#article1"
+})
+```
+
+``` html
+<p id="article1"></p>
+```
+
+``` javascript
+import {p} from "snabbdom-helpers"
+
+p({
+  selector: ".round"
+})
+```
+
+``` html
+<p class="round"></p>
+```
+
+``` javascript
+import {p} from "snabbdom-helpers"
+
+p({
+  selector: "#user1.profile.outward"
+})
+```
+
+``` html
+<p id="user1" class="profile outward"></p>
+```
+
+Content is either a String (of text) or an Array of Nodes and/or String:
+
+``` javascript
+import {p} from "snabbdom-helpers"
+
+p({
+  inner: "I'm fun!"
+})
+```
+
+``` html
+<p>I'm fun!</p>
+```
+
+``` javascript
+import {article} from "snabbdom-helpers"
+import {h1} from "snabbdom-helpers"
+
+article({
+  inner: [
+    h1({inner: "Hello"})
+    "world"
+  ]
+})
+```
+
+``` html
+<article><h1>Hello</h1>world</article>
+```
+
+Some *tags* have no content, they are called [void elements](https://www.w3.org/TR/html-markup/syntax.html#syntax-elements). For example:
+
+``` javascript
+import {img} from "snabbdom-helpers"
+
+img()
+```
+
+``` html
+<img>
+```
+
+If you give a void element any content it will throw an error:
+
+``` javascript
+import {meta} from "snabbdom-helpers"
+
+meta({inner: "Hello!"}) // console.error("No content is allowed on void element like <meta>")
+```
+
+Finally you can give any other attributes to your element:
+
+``` javascript
+import {video} from "snabbdom-helpers"
+
+video({
+  data: {
+    id: "1"
+  },
+  aria: {
+    title: "A Sad Movie"
+  },
+  src: "https://cdn.movies.com/m/1",
+  loop: true
+})
+```
+
+``` html
+<video data-id="1" aria-title="A Sad Movie" src="https://cdn.movies.com/m/1" loop></video>
+```
+
+Because `snabbdom-helpers` relies on `snabbdom` you can also use it's special style and event syntax systems.
+
+Here's a large example:
+
 ``` javascript
 import {article} from "snabbdom-helpers"
 import {h1} from "snabbdom-helpers"
