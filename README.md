@@ -1,57 +1,45 @@
 # snabbdom-helpers
 
-[![Quality](http://img.shields.io/codeclimate/github/krainboltgreene/snabbdom-helpers.svg?style=flat-square)](https://codeclimate.com/github/krainboltgreene/snabbdom-helpers)
-[![Coverage](http://img.shields.io/codeclimate/coverage/github/krainboltgreene/snabbdom-helpers.svg?style=flat-square)](https://codeclimate.com/github/krainboltgreene/snabbdom-helpers)
-[![Build](http://img.shields.io/travis-ci/krainboltgreene/snabbdom-helpers.svg?style=flat-square)](https://travis-ci.org/krainboltgreene/snabbdom-helpers)
-[![Releases](http://img.shields.io/github/release/krainboltgreene/snabbdom-helpers.svg?style=flat-square)](http://github.com/krainboltgreene/snabbdom-helpers/releases)
-[![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+A set of functions that map the entire list of the W3C DOM elements. Each function returns a [snabbdom]() vnode object.
 
-A set of functions that maps to the entire list of the W3C DOM elements. Each function returns a [snabbdom]() object.
+![Version][BADGE_VERSION]
+![Tests][BADGE_TRAVIS]
+![Stability][BADGE_STABILITY]
+![Dependencies][BADGE_DEPENDENCY]
 
-Here's how you use it (`patch` and `vdom` comes from `snabbdom`):
+
+## using
 
 ``` javascript
 import {article} from "snabbdom-helpers"
 import {h1} from "snabbdom-helpers"
 import {p} from "snabbdom-helpers"
 
-// ... snabbdom setup ...
-
-const newVirtualDom = article({
-  data: {id: "1"},
-  inner: [
-    h1({
-      style: {color: "blue"},
-      inner: "Hello"
-    }),
-    p({selector: ".red.body", inner: "World!"})
-  ]
-})
-
-patch(vdom, newVirtualDom)
+export default function view () {
+  return article({
+    data: {id: "1"},
+    aria: {role: "navigation"},
+    inner: [
+      h1({
+        style: {color: "blue"},
+        inner: "Hello"
+      }),
+      p({selector: ".red.body", inner: "World!"})
+    ]
+  })
+}
 ```
 
 It should output (minus white-spacing):
 
 ``` html
-<article data-id="1">
+<article data-id="1" aria-role="navigation">
   <h1 style="color: blue;">Hello</h1>
   <p class="red body">
     World!
   </p>
 </article>
 ```
-
-
-## installing
-
-To install just grab from npm:
-
-```
-$ npm install --save snabbdom-helpers
-```
-
-Add it into your project (with `require()` and `import ... from "snabbdom-helpers"`).
 
 
 # contributing
@@ -62,3 +50,9 @@ Add it into your project (with `require()` and `import ... from "snabbdom-helper
   4. Commit your changes (`git commit -am 'Add some feature'`)
   5. Push to the branch (`git push origin my-new-feature`)
   6. Create new Pull Request
+
+
+[BADGE_TRAVIS]: https://img.shields.io/travis/krainboltgreene/hsdk.js.svg?maxAge=2592000&style=flat-square
+[BADGE_VERSION]: https://img.shields.io/npm/v/hsdk.svg?maxAge=2592000&style=flat-square
+[BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
+[BADGE_DEPENDENCY]: https://img.shields.io/david/krainboltgreene/hsdk.js.svg?maxAge=2592000&style=flat-square
