@@ -3,7 +3,8 @@ import {concat} from "ramda"
 import {contains} from "ramda"
 import {map} from "ramda"
 import {mergeAll} from "ramda"
-import {omit} from "ramda"
+
+import transform from "./transform"
 
 const voids = [
   "area",
@@ -166,10 +167,8 @@ const tags = [
   "wbr",
   "xmp"
 ]
-
 const EMPTY_OBJECT = {}
 const EMTPY_STRING = ""
-const withoutSpecial = omit(["selector", "inner"])
 
 module.exports = mergeAll(map(function node (tag: string): object {
   const withTag = concat(tag)
@@ -178,24 +177,24 @@ module.exports = mergeAll(map(function node (tag: string): object {
     const warning = `No inner allowed in void element <${tag}>`
 
     return {
-      [tag]: (properties: {selector: string, inner?: string} = EMPTY_OBJECT): [string, object] => {
-        if (properties.inner) {
+      [tag]: (raw: {selector: string, inner?: string} = EMPTY_OBJECT): [string, object] => {
+        if (raw.inner) {
           console.warn(warning)
         }
 
         return dom(
-          withTag(properties.selector || EMTPY_STRING),
-          withoutSpecial(properties)
+          withTag(raw.selector || EMTPY_STRING),
+          transform(raw)
         )
       }
     }
   }
 
   return {
-    [tag]: (properties: {selector: string, inner?: string} = EMPTY_OBJECT): [string, object, string] => dom(
-      withTag(properties.selector || EMTPY_STRING),
-      withoutSpecial(properties),
-      properties.inner || EMTPY_STRING
+    [tag]: (raw: {selector?: string, inner?: string} = EMPTY_OBJECT): [string, object, string] => dom(
+      withTag(raw.selector || EMTPY_STRING),
+      transform(raw),
+      raw.inner || EMTPY_STRING
     )
   }
 })(tags))
