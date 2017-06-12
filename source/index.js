@@ -170,7 +170,7 @@ const tags = [
 const EMPTY_OBJECT = {}
 const EMTPY_STRING = ""
 
-module.exports = mergeAll(map(function node (tag: string): object {
+export default mergeAll(map(function node (tag: string): object {
   const withTag = concat(tag)
 
   if (contains(tag)(voids)) {
