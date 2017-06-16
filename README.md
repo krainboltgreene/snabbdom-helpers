@@ -105,7 +105,7 @@ If you give a void element any content it will throw an error:
 ``` javascript
 import {meta} from "snabbdom-helpers"
 
-meta({inner: "Hello!"}) // console.error("No content is allowed on void element like <meta>")
+meta({inner: "Hello!"}) // console.warn("No content is allowed on void element like <meta>")
 ```
 
 Finally you can give any other attributes to your element:
