@@ -177,8 +177,8 @@ module.exports = mergeAll(map(function node (tag: string): object {
     const warning = `No inner allowed in void element <${tag}>`
 
     return {
-      [tag]: (raw: {selector: string, inner?: string} = EMPTY_OBJECT): [string, object] => {
-        if (raw.inner) {
+      [tag]: (raw: {selector: string, inner?: string, content?: string} = EMPTY_OBJECT): [string, object] => {
+        if (raw.inner || raw.content) {
           console.warn(warning)
         }
 
@@ -191,10 +191,10 @@ module.exports = mergeAll(map(function node (tag: string): object {
   }
 
   return {
-    [tag]: (raw: {selector?: string, inner?: string} = EMPTY_OBJECT): [string, object, string] => dom(
+    [tag]: (raw: {selector?: string, inner?: string, content?: string} = EMPTY_OBJECT): [string, object, string] => dom(
       withTag(raw.selector || EMTPY_STRING),
       transform(raw),
-      raw.inner || EMTPY_STRING
+      raw.inner || raw.content || EMTPY_STRING
     )
   }
 })(tags))
