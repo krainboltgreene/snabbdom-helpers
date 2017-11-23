@@ -43,9 +43,9 @@
     "tap": "10.7.3"
   },
   "dependencies": {
-    "@unction/flattentree": "2.44.0",
+    "@unction/flattentree": "2.48.0",
     "@unction/istype": "2.12.0",
-    "@unction/reducewithvaluekey": "4.39.0",
+    "@unction/reducewithvaluekey": "4.40.0",
     "ramda": "0.25.0",
     "snabbdom": "0.7.0"
   }
