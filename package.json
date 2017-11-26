@@ -2,47 +2,67 @@
   "name": "snabbdom-helpers",
   "version": "4.4.0",
   "description": "Individual HTML helper functions for the snabbdom library",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/krainboltgreene/snabbdom-helpers.git"
-  },
   "keywords": [
-    "html",
     "snabbdom",
-    "virtual-dom"
+    "dom",
+    "helpers",
+    "elements"
   ],
-  "author": "Kurtis Rainbolt-Greene <kurtis@rainbolt-greene.online>",
+  "contributors": [
+    {
+      "name": "Kurtis Rainbolt-Greene",
+      "email": "kurtis@rainbolt-greene.online",
+      "url": "https://kurtis.rainbolt-greene.online"
+    }
+  ],
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/krainboltgreene/snabbdom-helpers/issues"
-  },
   "homepage": "https://github.com/krainboltgreene/snabbdom-helpers#readme",
-  "main": "transpiled/source/index.js",
+  "repository": "github:krainboltgreene/snabbdom-helpers",
+  "bugs": "https://github.com/krainboltgreene/snabbdom-helpers/issues",
+  "main": "transpiled/index.js",
+  "files": [
+    "transpiled/"
+  ],
+  "nyc": {
+    "require": [
+      "babel-register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+  },
   "scripts": {
-    "prepublish": "npm run build",
-    "build": "babel './source/**/*.js' -d './transpiled/'",
-    "pretest": "npm run build",
-    "test": "tap './transpiled/**/test.js'",
+    "prepublishOnly": "npm run build",
+    "test": "NODE_ENV=test tap --100 './source/**/test.js'",
+    "build": "babel './source/' -d './transpiled/'",
     "lint": "eslint './source/'",
-    "check": "flow check"
+    "check": "flow check",
+    "ci": "npm run test && npm run lint && npm run check",
+    "watch": "chokidar './source/' --command 'npm run ci --silent'"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
     "babel-core": "6.26.0",
     "babel-eslint": "8.0.2",
+    "babel-plugin-istanbul": "4.1.5",
     "babel-plugin-transform-object-rest-spread": "6.26.0",
     "babel-preset-env": "1.6.1",
     "babel-preset-flow": "6.23.0",
+    "chokidar-cli": "1.2.0",
     "eslint": "4.11.0",
+    "eslint-plugin-babel": "4.1.2",
     "eslint-plugin-flowtype": "2.39.1",
+    "eslint-plugin-immutable": "1.0.0",
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-promise": "3.6.0",
     "flow": "0.2.3",
     "flow-bin": "0.59.0",
     "flow-typed": "2.2.3",
-    "npm-run-all": "4.1.2",
+    "nyc": "11.3.0",
     "snabbdom-to-html": "5.0.0",
     "tap": "10.7.3"
   },
   "dependencies": {
+    "@unction/compact": "2.8.0",
     "@unction/flattentree": "2.52.0",
     "@unction/istype": "2.12.0",
     "@unction/reducewithvaluekey": "5.0.0",

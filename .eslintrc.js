@@ -1,7 +1,11 @@
 module.exports = {
   parser: "babel-eslint",
   plugins: [
-    "flowtype"
+    "babel",
+    "immutable",
+    "import",
+    "flowtype",
+    "promise"
   ],
   env: {
     es6: true,
@@ -9,12 +13,25 @@ module.exports = {
     browser: true
   },
   rules: {
+    "promise/always-return": "error",
+    "promise/no-return-wrap": "error",
+    "promise/param-names": "error",
+    "promise/catch-or-return": "error",
+    "promise/no-native": "off", // We have babel
+    "promise/no-nesting": "error",
+    "promise/no-promise-in-callback": "error",
+    "promise/no-callback-in-promise": "error",
+    "promise/avoid-new": "error",
+    "promise/prefer-await-to-then": "off", // Not convinced of await/async
+    "promise/prefer-await-to-callbacks": "off", // Not convinced of await/async
     "accessor-pairs": "error",
     "array-bracket-spacing": "error",
     "array-callback-return": "error",
     "arrow-body-style": "off", // Weird style
     "arrow-parens": "error",
     "arrow-spacing": "error",
+    "babel/new-cap": "error",
+    "babel/no-invalid-this": "error",
     "block-scoped-var": "error",
     "block-spacing": "error",
     "brace-style": "error",
@@ -22,7 +39,7 @@ module.exports = {
     "camelcase": "warn",
     "capitalized-comments": "off",
     "class-methods-use-this": "error",
-    "comma-dangle": ["error", "only-multiline"],
+    "comma-dangle": ["error", "always-multiline"],
     "comma-spacing": "error",
     "comma-style": "error",
     "complexity": "error",
@@ -66,6 +83,36 @@ module.exports = {
     "id-blacklist": "error",
     "id-length": "error",
     "id-match": "error",
+    "immutable/no-let": "error",
+    "immutable/no-mutation": "warn",
+    "immutable/no-this": "error",
+    "import/default": "error",
+    "import/export": "error",
+    "import/extensions": "error",
+    "import/first": "error",
+    "import/max-dependencies": "warn",
+    "import/named": "error",
+    "import/namespace": "error",
+    "import/newline-after-import": "error",
+    "import/no-absolute-path": "error",
+    "import/no-amd": "error",
+    "import/no-commonjs": "error",
+    "import/no-deprecated": "error",
+    "import/no-duplicates": "off", // This rule doesn't understand my style
+    "import/no-dynamic-require": "error",
+    "import/no-extraneous-dependencies": "error",
+    "import/no-mutable-exports": "error",
+    "import/no-named-as-default-member": "error",
+    "import/no-named-as-default": "error",
+    "import/no-namespace": "off", // Doesn't work with star imports?
+    "import/no-nodejs-modules": "off", // Only for frontend
+    "import/no-restricted-paths": "off", // Isn't quite helpful
+    "import/no-unassigned-import": "error",
+    "import/no-unresolved": "error",
+    "import/no-webpack-loader-syntax": "error",
+    "import/order": "error",
+    "import/prefer-default-export": "error",
+    "import/unambiguous": "error",
     "indent": ["error", 2, {"SwitchCase": 1}],
     "init-declarations": "error",
     "key-spacing": "error",
@@ -90,7 +137,7 @@ module.exports = {
     "no-alert": "error",
     "no-array-constructor": "error",
     "no-await-in-loop": "error",
-    "no-bitwise": "warn",
+    "no-bitwise": "off", // Doesn't work with pipes
     "no-caller": "error",
     "no-case-declarations": "error",
     "no-catch-shadow": "error",
@@ -227,7 +274,7 @@ module.exports = {
     "one-var-declaration-per-line": "error",
     "one-var": ["error", "never"],
     "operator-assignment": "error",
-    "operator-linebreak": "error",
+    "operator-linebreak": "off", // Doesn't work with pipes
     "padded-blocks": ["error", "never"],
     "prefer-arrow-callback": "off", // This really isn't an appropriate rule
     "prefer-const": "error",

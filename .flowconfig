@@ -1,13 +1,16 @@
 [ignore]
 .*/node_modules/.*
-.*/\.git/.*
-<PROJECT_ROOT>/transpiled/.*
+.*/transpiled/.*
+.*/coverage/.*
+.*/.nyc_output/.*
+.*/test.js
 
 [include]
-./source/
+./source/index.js
 
 [libs]
-flow-typed
+flow-typed/
+types/
 
 [options]
 all=true
