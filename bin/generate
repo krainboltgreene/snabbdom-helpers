@@ -1,0 +1,522 @@
+#!/usr/bin/env ruby
+
+EMPTY_TAGS = [
+  "area",
+  "base",
+  "br",
+  "col",
+  "embed",
+  "hr",
+  "img",
+  "input",
+  "link",
+  "meta",
+  "param",
+  "source",
+  "track",
+  "wbr"
+]
+CONTENT_TAGS = [
+  "a",
+  "abbr",
+  "address",
+  "article",
+  "aside",
+  "audio",
+  "b",
+  "bdi",
+  "bdo",
+  "bgsound",
+  "blockquote",
+  "body",
+  "button",
+  "canvas",
+  "caption",
+  "cite",
+  "code",
+  "colgroup",
+  "data",
+  "datalist",
+  "dd",
+  "del",
+  "details",
+  "dfn",
+  "dir",
+  "div",
+  "dl",
+  "dt",
+  "em",
+  "fieldset",
+  "figcaption",
+  "figure",
+  "footer",
+  "form",
+  "h1",
+  "h2",
+  "h3",
+  "h4",
+  "h5",
+  "h6",
+  "head",
+  "header",
+  "hgroup",
+  "html",
+  "i",
+  "iframe",
+  "ins",
+  "kbd",
+  "label",
+  "legend",
+  "li",
+  "main",
+  "map",
+  "mark",
+  "menu",
+  "menuitem",
+  "meter",
+  "nav",
+  "nobr",
+  "noframes",
+  "noscript",
+  "object",
+  "ol",
+  "optgroup",
+  "option",
+  "output",
+  "p",
+  "picture",
+  "pre",
+  "progress",
+  "q",
+  "rp",
+  "rt",
+  "rtc",
+  "ruby",
+  "s",
+  "samp",
+  "script",
+  "section",
+  "select",
+  "small",
+  "span",
+  "strong",
+  "style",
+  "sub",
+  "summary",
+  "sup",
+  "table",
+  "tbody",
+  "td",
+  "template",
+  "textarea",
+  "tfoot",
+  "th",
+  "thead",
+  "time",
+  "title",
+  "tr",
+  "u",
+  "ul",
+  ["_var", "var"],
+  "video"
+]
+
+File.write(
+  File.join(".", "source", "index.js"),
+  <<~INDEX
+  /* eslint-disable max-lines, func-style, id-length, no-underscore-dangle */
+  import domElement from "snabbdom/h"
+
+  import type {ParametersType} from "types"
+  import type {VirtualDOMNodeType} from "types"
+  import type {AttributesType} from "types"
+
+  import normalize from "./normalize"
+
+  const EMPTY_ERROR_MESSAGE = "Empty tags cannot semantically have children."
+  const EMPTY_PARAMETERS = {}
+  const EMPTY_CONTENT = ""
+  const EMPTY_SELECTOR = ""
+
+  #{
+    CONTENT_TAGS.map do |tag|
+      name = if tag.kind_of?(Array) then tag[0] else tag end
+      element = if tag.kind_of?(Array) then tag[1] else tag end
+
+      <<~DEFINITION
+        export function #{name} (parameters: ParametersType): VirtualDOMNodeType {
+          const {children, selector, ...attributes}: {children?: mixed, selector?: string, attributes?: AttributesType} = parameters || EMPTY_PARAMETERS
+
+          if (children instanceof Function) {
+            return domElement(`#{element}${selector || EMPTY_SELECTOR}`, normalize(attributes), [children])
+          }
+
+          return domElement(`#{element}${selector || EMPTY_SELECTOR}`, normalize(attributes), children || EMPTY_CONTENT)
+        }
+      DEFINITION
+    end.join("\n")
+  }
+  #{
+    EMPTY_TAGS.map do |tag|
+      name = if tag.kind_of?(Array) then tag[0] else tag end
+      element = if tag.kind_of?(Array) then tag[1] else tag end
+
+      <<~DEFINITION
+      export function #{name} (parameters: ParametersType): VirtualDOMNodeType {
+        const {selector, ...attributes}: {selector?: string, attributes?: AttributesType} = parameters || EMPTY_PARAMETERS
+
+        if (parameters && parameters.children) {
+          throw new Error(EMPTY_ERROR_MESSAGE)
+        }
+
+        return domElement(`#{element}${selector || EMPTY_SELECTOR}`, normalize(attributes))
+      }
+      DEFINITION
+    end.join("\n")
+  }
+  INDEX
+)
+
+File.write(
+  File.join(".", "source", "test.js"),
+  <<~TEST
+  /* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type, no-undefined, max-lines */
+  /* istanbul ignore file */
+  import {test} from "tap"
+  import toHTML from "snabbdom-to-html"
+  import plugins from "snabbdom-to-html/init"
+  import modules from "snabbdom-to-html/modules"
+
+  #{
+    (CONTENT_TAGS + EMPTY_TAGS).map do |tag|
+      name = if tag.kind_of?(Array) then tag[0] else tag end
+      element = if tag.kind_of?(Array) then tag[1] else tag end
+
+      <<~IMPORT
+      import {#{name}} from "./"
+      IMPORT
+    end.join
+  }
+  const toHTMLWithPlugins = plugins([
+    modules.class,
+    modules.props,
+    modules.attributes,
+    modules.style,
+  ])
+
+  #{
+    CONTENT_TAGS.map do |tag|
+      name = if tag.kind_of?(Array) then tag[0] else tag end
+      element = if tag.kind_of?(Array) then tag[1] else tag end
+
+      <<~CASES
+      test("empty", ({similar, end}) => {
+        similar(#{name}(), {sel: "#{element}"})
+        end()
+      })
+
+      test("selector", ({similar, end}) => {
+        similar(#{name}({selector: ".value"}), {sel: "#{element}.value"})
+        end()
+      })
+
+      test("children string", ({similar, end}) => {
+        similar(#{name}({children: "test"}), {text: "test"})
+        end()
+      })
+
+      test("children array string", ({similar, end}) => {
+        similar(#{name}({children: ["test"]}), {children: [{text: "test"}]})
+        end()
+      })
+
+      test("children function", ({similar, end}) => {
+        similar(#{name}({children: Function}), {children: [Function]})
+        end()
+      })
+
+      test("children array function", ({similar, end}) => {
+        similar(#{name}({children: [Function]}), {children: [Function]})
+        end()
+      })
+
+      test("aria", ({similar, end}) => {
+        similar(#{name}({aria: {id: "1"}}), {data: {attrs: {"aria-id": "1"}}})
+        end()
+      })
+
+      test("data", ({similar, end}) => {
+        similar(#{name}({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+        end()
+      })
+
+      test("full", ({similar, end}) => {
+        similar(
+          #{name}({
+            "selector": "#b.c.d",
+            "children": "test",
+            "props": {title: "x"},
+            "properties": {href: "/a"},
+            "attributes": {xxx: "x"},
+            "attrs": {yyy: "y"},
+            "data": {
+              id: "1",
+              name: "Kurtis",
+            },
+            "dataset": {ds: "ds"},
+            "style": {border: "1px"},
+            "on": {click: () => null},
+            "aria": {role: "navigation"},
+            "class": {
+              active: true,
+              ignored: false,
+            },
+            "key": "key",
+            "hook": {insert: () => null},
+          }),
+          {
+            sel: "#{element}#b.c.d",
+            data: {
+              "attrs": {
+                "yyy": "y",
+                "xxx": "x",
+                "data-name": "Kurtis",
+                "data-id": "1",
+                "aria-role": "navigation",
+                "data-ds": "ds",
+              },
+              "props": {title: "x"},
+              "style": {border: "1px"},
+              "class": {
+                active: true,
+                ignored: false,
+              },
+              "key": "key",
+            },
+            children: undefined,
+            text: "test",
+            elm: undefined,
+            key: "key",
+          }
+        )
+        end()
+      })
+
+      test("html", ({equal, end}) => {
+        equal(
+          toHTML(#{name}({
+            "selector": "#b.c.d",
+            "children": "test",
+            "key": "key",
+            "props": {title: "x"},
+            "properties": {href: "/a"},
+            "attributes": {xxx: "x"},
+            "attrs": {yyy: "y"},
+            "data": {
+              id: "1",
+              name: "Kurtis",
+            },
+            "dataset": {ds: "ds"},
+            "style": {border: "1px"},
+            "on": {click: () => null},
+            "aria": {role: "navigation"},
+            "class": {
+              active: true,
+              ignored: false,
+            },
+            "hook": {insert: () => null},
+          })),
+          "<#{element} id=\\"b\\" class=\\"c d active\\" yyy=\\"y\\" xxx=\\"x\\" data-name=\\"Kurtis\\" data-id=\\"1\\" aria-role=\\"navigation\\" data-ds=\\"ds\\" title=\\"x\\" href=\\"/a\\" style=\\"border: 1px\\">test</#{element}>"
+        )
+        end()
+      })
+
+      test("html with plugins", ({equal, end}) => {
+        equal(
+          toHTMLWithPlugins(#{name}({
+            "selector": "#b.c.d",
+            "children": "test",
+            "key": "key",
+            "props": {title: "x"},
+            "properties": {href: "/a"},
+            "attributes": {xxx: "x"},
+            "attrs": {yyy: "y"},
+            "data": {
+              id: "1",
+              name: "Kurtis",
+            },
+            "dataset": {ds: "ds"},
+            "style": {border: "1px"},
+            "on": {click: () => null},
+            "aria": {role: "navigation"},
+            "class": {
+              active: true,
+              ignored: false,
+            },
+            "hook": {insert: () => null},
+          })),
+          "<#{element} id=\\"b\\" class=\\"c d active\\" title=\\"x\\" href=\\"/a\\" yyy=\\"y\\" xxx=\\"x\\" data-name=\\"Kurtis\\" data-id=\\"1\\" aria-role=\\"navigation\\" data-ds=\\"ds\\" style=\\"border: 1px\\">test</#{element}>"
+        )
+        end()
+      })
+      CASES
+    end.join("\n")
+  }
+  #{
+    EMPTY_TAGS.map do |tag|
+      name = if tag.kind_of?(Array) then tag[0] else tag end
+      element = if tag.kind_of?(Array) then tag[1] else tag end
+
+      <<~CASES
+      test("empty", ({similar, end}) => {
+        similar(#{name}(), {sel: "#{element}"})
+        end()
+      })
+
+      test("selector", ({similar, end}) => {
+        similar(#{name}({selector: ".value"}), {sel: "#{element}.value"})
+        end()
+      })
+
+      test("children string", ({throws, end}) => {
+        throws(() => #{name}({children: "test"}), {message: "Empty tags cannot semantically have children."})
+        end()
+      })
+
+      test("children array string", ({throws, end}) => {
+        throws(() => #{name}({children: ["test"]}), {message: "Empty tags cannot semantically have children."})
+        end()
+      })
+
+      test("children function", ({throws, end}) => {
+        throws(() => #{name}({children: Function}), {message: "Empty tags cannot semantically have children."})
+        end()
+      })
+
+      test("children array function", ({throws, end}) => {
+        throws(() => #{name}({children: [Function]}), {message: "Empty tags cannot semantically have children."})
+        end()
+      })
+
+      test("aria", ({similar, end}) => {
+        similar(#{name}({aria: {id: "1"}}), {data: {attrs: {"aria-id": "1"}}})
+        end()
+      })
+
+      test("data", ({similar, end}) => {
+        similar(#{name}({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+        end()
+      })
+
+      test("full", ({similar, end}) => {
+        similar(
+          #{name}({
+            "selector": "#b.c.d",
+            "props": {title: "x"},
+            "properties": {href: "/a"},
+            "attributes": {xxx: "x"},
+            "attrs": {yyy: "y"},
+            "data": {
+              id: "1",
+              name: "Kurtis",
+            },
+            "dataset": {ds: "ds"},
+            "style": {border: "1px"},
+            "on": {click: () => null},
+            "aria": {role: "navigation"},
+            "class": {
+              active: true,
+              ignored: false,
+            },
+            "key": "key",
+            "hook": {insert: () => null},
+          }),
+          {
+            sel: "#{element}#b.c.d",
+            data: {
+              "attrs": {
+                "yyy": "y",
+                "xxx": "x",
+                "data-name": "Kurtis",
+                "data-id": "1",
+                "aria-role": "navigation",
+                "data-ds": "ds",
+              },
+              "props": {title: "x"},
+              "style": {border: "1px"},
+              "class": {
+                active: true,
+                ignored: false,
+              },
+              "key": "key",
+            },
+            children: undefined,
+            text: undefined,
+            elm: undefined,
+            key: "key",
+          }
+        )
+        end()
+      })
+
+      test("html", ({equal, end}) => {
+        equal(
+          toHTML(#{name}({
+            "selector": "#b.c.d",
+            "key": "key",
+            "props": {title: "x"},
+            "properties": {href: "/a"},
+            "attributes": {xxx: "x"},
+            "attrs": {yyy: "y"},
+            "data": {
+              id: "1",
+              name: "Kurtis",
+            },
+            "dataset": {ds: "ds"},
+            "style": {border: "1px"},
+            "on": {click: () => null},
+            "aria": {role: "navigation"},
+            "class": {
+              active: true,
+              ignored: false,
+            },
+            "hook": {insert: () => null},
+          })),
+          "<#{element} id=\\"b\\" class=\\"c d active\\" yyy=\\"y\\" xxx=\\"x\\" data-name=\\"Kurtis\\" data-id=\\"1\\" aria-role=\\"navigation\\" data-ds=\\"ds\\" title=\\"x\\" href=\\"/a\\" style=\\"border: 1px\\">"
+        )
+        end()
+      })
+
+      test("html with plugins", ({equal, end}) => {
+        equal(
+          toHTMLWithPlugins(#{name}({
+            "selector": "#b.c.d",
+            "key": "key",
+            "props": {title: "x"},
+            "properties": {href: "/a"},
+            "attributes": {xxx: "x"},
+            "attrs": {yyy: "y"},
+            "data": {
+              id: "1",
+              name: "Kurtis",
+            },
+            "dataset": {ds: "ds"},
+            "style": {border: "1px"},
+            "on": {click: () => null},
+            "aria": {role: "navigation"},
+            "class": {
+              active: true,
+              ignored: false,
+            },
+            "hook": {insert: () => null},
+          })),
+          "<#{element} id=\\"b\\" class=\\"c d active\\" title=\\"x\\" href=\\"/a\\" yyy=\\"y\\" xxx=\\"x\\" data-name=\\"Kurtis\\" data-id=\\"1\\" aria-role=\\"navigation\\" data-ds=\\"ds\\" style=\\"border: 1px\\">"
+        )
+        end()
+      })
+
+      CASES
+    end.join("\n")
+  }
+  TEST
+)
