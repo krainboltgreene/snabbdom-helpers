@@ -64,7 +64,7 @@ Content is either a String (of text) or an Array of Nodes and/or String:
 import {p} from "snabbdom-helpers"
 
 p({
-  inner: "I'm fun!"
+  children: "I'm fun!"
 })
 ```
 
@@ -77,8 +77,8 @@ import {article} from "snabbdom-helpers"
 import {h1} from "snabbdom-helpers"
 
 article({
-  inner: [
-    h1({inner: "Hello"})
+  children: [
+    h1({children: "Hello"})
     "world"
   ]
 })
@@ -105,7 +105,7 @@ If you give a void element any content it will throw an error:
 ``` javascript
 import {meta} from "snabbdom-helpers"
 
-meta({inner: "Hello!"}) // console.warn("No content is allowed on void element like <meta>")
+meta({children: "Hello!"}) // console.warn("No content is allowed on void element like <meta>")
 ```
 
 Finally you can give any other attributes to your element:
@@ -142,12 +142,12 @@ export default function view () {
   return article({
     data: {id: "1"},
     aria: {role: "navigation"},
-    inner: [
+    children: [
       h1({
         style: {color: "blue"},
-        inner: "Hello"
+        children: "Hello"
       }),
-      p({selector: ".red.body", inner: "World!"})
+      p({selector: ".red.body", children: "World!"})
     ]
   })
 }
