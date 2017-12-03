@@ -100,12 +100,12 @@ img()
 <img>
 ```
 
-If you give a void element any content it will throw an error:
+If you give a empty tag any children it will throw an error:
 
 ``` javascript
 import {meta} from "snabbdom-helpers"
 
-meta({children: "Hello!"}) // console.warn("No content is allowed on void element like <meta>")
+meta({children: "Hello!"}) // new Error("Empty tag cannot semantically have children")
 ```
 
 Finally you can give any other attributes to your element:
