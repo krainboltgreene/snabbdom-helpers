@@ -1,6 +1,7 @@
 export type VirtualDOMPropertiesType = {
-  props?: {[key: string]: mixed},
-  style?: {[key: string]: mixed},
+  attrs?: {},
+  props?: {},
+  style?: {},
   on?: {[key: string]: Function},
   class?: {[key: string]: boolean},
   hook?: {[key: string]: Function},
@@ -11,16 +12,17 @@ export type VirtualDOMNodeType = {
   children?: Array<mixed>,
   text?: string,
 } & VirtualDOMPropertiesType
-export type AttributesType = {
-  attrs?: {},
+export type ShorthandsType = {
+  data?: {},
+  aria?: {},
   attributes?: {},
   properties?: {},
   styles?: {},
-  events?: {},
-  hooks?: {},
-  lifecycle?: {},
-} & VirtualDOMPropertiesType
+  events?: {[key: string]: Function},
+  hooks?: {[key: string]: Function},
+  lifecycle?: {[key: string]: Function},
+}
 export type ParametersType = {
   children?: mixed,
-  selector?: mixed,
-} & AttributesType
+  selector?: string,
+} & ShorthandsType & VirtualDOMPropertiesType

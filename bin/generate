@@ -127,11 +127,10 @@ File.write(
   /* eslint-disable max-lines, func-style, id-length, no-underscore-dangle */
   import domElement from "snabbdom/h"
 
+  import normalize from "./normalize"
+
   import type {ParametersType} from "types"
   import type {VirtualDOMNodeType} from "types"
-  import type {AttributesType} from "types"
-
-  import normalize from "./normalize"
 
   const EMPTY_ERROR_MESSAGE = "Empty tags cannot semantically have children."
   const EMPTY_PARAMETERS = {}
@@ -145,13 +144,13 @@ File.write(
 
       <<~DEFINITION
         export function #{name} (parameters: ParametersType): VirtualDOMNodeType {
-          const {children, selector, ...attributes}: {children?: mixed, selector?: string, attributes?: AttributesType} = parameters || EMPTY_PARAMETERS
+          const {children, selector}: {children?: mixed, selector?: string} = parameters || EMPTY_PARAMETERS
 
           if (children instanceof Function) {
-            return domElement(`#{element}${selector || EMPTY_SELECTOR}`, normalize(attributes), [children])
+            return domElement(`#{element}${selector || EMPTY_SELECTOR}`, normalize(parameters), [children])
           }
 
-          return domElement(`#{element}${selector || EMPTY_SELECTOR}`, normalize(attributes), children || EMPTY_CONTENT)
+          return domElement(`#{element}${selector || EMPTY_SELECTOR}`, normalize(parameters), children || EMPTY_CONTENT)
         }
       DEFINITION
     end.join("\n")
@@ -163,13 +162,13 @@ File.write(
 
       <<~DEFINITION
       export function #{name} (parameters: ParametersType): VirtualDOMNodeType {
-        const {selector, ...attributes}: {selector?: string, attributes?: AttributesType} = parameters || EMPTY_PARAMETERS
+        const {selector}: {selector?: string} = parameters || EMPTY_PARAMETERS
 
         if (parameters && parameters.children) {
           throw new Error(EMPTY_ERROR_MESSAGE)
         }
 
-        return domElement(`#{element}${selector || EMPTY_SELECTOR}`, normalize(attributes))
+        return domElement(`#{element}${selector || EMPTY_SELECTOR}`, normalize(parameters))
       }
       DEFINITION
     end.join("\n")
