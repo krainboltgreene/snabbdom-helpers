@@ -12,6 +12,11 @@ module.exports = {
     node: true,
     browser: true
   },
+  settings: {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  },
   rules: {
     "promise/always-return": "error",
     "promise/no-return-wrap": "error",

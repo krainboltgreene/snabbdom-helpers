@@ -32,7 +32,7 @@
   },
   "scripts": {
     "prepublishOnly": "npm run build",
-    "test": "NODE_ENV=test tap --100 './source/**/test.js'",
+    "test": "NODE_ENV=test tap --jobs-auto --100 './source/**/test.js'",
     "build": "babel './source/' -d './transpiled/'",
     "lint": "eslint './source/'",
     "check": "flow check",
@@ -44,29 +44,31 @@
     "babel-core": "6.26.0",
     "babel-eslint": "8.0.3",
     "babel-plugin-istanbul": "4.1.5",
+    "babel-plugin-module-resolver": "3.0.0",
     "babel-plugin-transform-object-rest-spread": "6.26.0",
     "babel-preset-env": "1.6.1",
     "babel-preset-flow": "6.23.0",
     "chokidar-cli": "1.2.0",
-    "eslint": "4.12.1",
+    "eslint": "4.13.1",
+    "eslint-import-resolver-babel-module": "4.0.0",
     "eslint-plugin-babel": "4.1.2",
-    "eslint-plugin-flowtype": "2.39.1",
+    "eslint-plugin-flowtype": "2.40.1",
     "eslint-plugin-immutable": "1.0.0",
     "eslint-plugin-import": "2.8.0",
     "eslint-plugin-promise": "3.6.0",
     "flow": "0.2.3",
-    "flow-bin": "0.60.1",
+    "flow-bin": "0.61.0",
     "flow-typed": "2.2.3",
-    "nyc": "11.3.0",
+    "nyc": "11.4.1",
     "snabbdom-to-html": "5.0.0",
     "tap": "11.0.0"
   },
   "dependencies": {
     "@unction/compact": "2.8.0",
-    "@unction/flattentree": "3.1.0",
+    "@unction/flattentree": "3.3.0",
     "@unction/istype": "2.12.0",
     "@unction/reducewithvaluekey": "5.0.0",
     "ramda": "0.25.0",
-    "snabbdom": "0.7.0"
+    "snabbdom": "0.7.1"
   }
 }

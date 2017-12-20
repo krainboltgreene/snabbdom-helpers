@@ -4,6 +4,14 @@
     "flow"
   ],
   "plugins": [
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "^types$": "./types"
+        }
+      }
+    ],
     "transform-object-rest-spread"
   ],
   "env": {
