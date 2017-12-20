@@ -1,10 +1,11 @@
 import compact from "@unction/compact"
-import type {VirtualDOMPropertiesType} from "types"
-import type {AttributesType} from "types"
 
 import microformats from "./microformats"
 
-export default function transform (raw: AttributesType): VirtualDOMPropertiesType {
+import type {VirtualDOMPropertiesType} from "types"
+import type {ParametersType} from "types"
+
+export default function transform (raw: ParametersType): VirtualDOMPropertiesType {
   return compact(
     {
       "attrs": {
