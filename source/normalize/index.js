@@ -11,13 +11,7 @@ export default function transform (raw: ParametersType): VirtualDOMPropertiesTyp
       "attrs": {
         ...raw.attrs,
         ...raw.attributes,
-        ...microformats({
-          data: raw.data,
-          aria: raw.aria,
-        }),
-        ...microformats({data: raw.dataset}),
-        ...microformats(raw.props || {}),
-        ...microformats(raw.properties || {}),
+        ...microformats(raw),
       },
       "props": {
         ...raw.props,
