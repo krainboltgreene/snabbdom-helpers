@@ -262,7 +262,6 @@ File.write(
               id: "1",
               name: "Kurtis",
             },
-            "dataset": {ds: "ds"},
             "style": {border: "1px"},
             "on": {click: () => null},
             "aria": {role: "navigation"},
@@ -282,7 +281,6 @@ File.write(
                 "data-name": "Kurtis",
                 "data-id": "1",
                 "aria-role": "navigation",
-                "data-ds": "ds",
               },
               "props": {title: "x"},
               "style": {border: "1px"},
@@ -315,7 +313,6 @@ File.write(
               id: "1",
               name: "Kurtis",
             },
-            "dataset": {ds: "ds"},
             "style": {border: "1px"},
             "on": {click: () => null},
             "aria": {role: "navigation"},
@@ -325,7 +322,7 @@ File.write(
             },
             "hook": {insert: () => null},
           })),
-          "<#{element} id=\\"b\\" class=\\"c d active\\" yyy=\\"y\\" xxx=\\"x\\" data-name=\\"Kurtis\\" data-id=\\"1\\" aria-role=\\"navigation\\" data-ds=\\"ds\\" title=\\"x\\" href=\\"/a\\" style=\\"border: 1px\\">test</#{element}>"
+          "<#{element} id=\\"b\\" class=\\"c d active\\" yyy=\\"y\\" xxx=\\"x\\" data-name=\\"Kurtis\\" data-id=\\"1\\" aria-role=\\"navigation\\" title=\\"x\\" href=\\"/a\\" style=\\"border: 1px\\">test</#{element}>"
         )
         end()
       })
@@ -344,7 +341,6 @@ File.write(
               id: "1",
               name: "Kurtis",
             },
-            "dataset": {ds: "ds"},
             "style": {border: "1px"},
             "on": {click: () => null},
             "aria": {role: "navigation"},
@@ -354,7 +350,7 @@ File.write(
             },
             "hook": {insert: () => null},
           })),
-          "<#{element} id=\\"b\\" class=\\"c d active\\" title=\\"x\\" href=\\"/a\\" yyy=\\"y\\" xxx=\\"x\\" data-name=\\"Kurtis\\" data-id=\\"1\\" aria-role=\\"navigation\\" data-ds=\\"ds\\" style=\\"border: 1px\\">test</#{element}>"
+          "<#{element} id=\\"b\\" class=\\"c d active\\" title=\\"x\\" href=\\"/a\\" yyy=\\"y\\" xxx=\\"x\\" data-name=\\"Kurtis\\" data-id=\\"1\\" aria-role=\\"navigation\\" style=\\"border: 1px\\">test</#{element}>"
         )
         end()
       })
@@ -419,7 +415,6 @@ File.write(
               id: "1",
               name: "Kurtis",
             },
-            "dataset": {ds: "ds"},
             "style": {border: "1px"},
             "on": {click: () => null},
             "aria": {role: "navigation"},
@@ -439,7 +434,6 @@ File.write(
                 "data-name": "Kurtis",
                 "data-id": "1",
                 "aria-role": "navigation",
-                "data-ds": "ds",
               },
               "props": {title: "x"},
               "style": {border: "1px"},
@@ -471,7 +465,6 @@ File.write(
               id: "1",
               name: "Kurtis",
             },
-            "dataset": {ds: "ds"},
             "style": {border: "1px"},
             "on": {click: () => null},
             "aria": {role: "navigation"},
@@ -481,7 +474,7 @@ File.write(
             },
             "hook": {insert: () => null},
           })),
-          "<#{element} id=\\"b\\" class=\\"c d active\\" yyy=\\"y\\" xxx=\\"x\\" data-name=\\"Kurtis\\" data-id=\\"1\\" aria-role=\\"navigation\\" data-ds=\\"ds\\" title=\\"x\\" href=\\"/a\\" style=\\"border: 1px\\">"
+          "<#{element} id=\\"b\\" class=\\"c d active\\" yyy=\\"y\\" xxx=\\"x\\" data-name=\\"Kurtis\\" data-id=\\"1\\" aria-role=\\"navigation\\" title=\\"x\\" href=\\"/a\\" style=\\"border: 1px\\">"
         )
         end()
       })
@@ -499,7 +492,6 @@ File.write(
               id: "1",
               name: "Kurtis",
             },
-            "dataset": {ds: "ds"},
             "style": {border: "1px"},
             "on": {click: () => null},
             "aria": {role: "navigation"},
@@ -509,7 +501,7 @@ File.write(
             },
             "hook": {insert: () => null},
           })),
-          "<#{element} id=\\"b\\" class=\\"c d active\\" title=\\"x\\" href=\\"/a\\" yyy=\\"y\\" xxx=\\"x\\" data-name=\\"Kurtis\\" data-id=\\"1\\" aria-role=\\"navigation\\" data-ds=\\"ds\\" style=\\"border: 1px\\">"
+          "<#{element} id=\\"b\\" class=\\"c d active\\" title=\\"x\\" href=\\"/a\\" yyy=\\"y\\" xxx=\\"x\\" data-name=\\"Kurtis\\" data-id=\\"1\\" aria-role=\\"navigation\\" style=\\"border: 1px\\">"
         )
         end()
       })

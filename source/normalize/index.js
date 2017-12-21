@@ -13,6 +13,7 @@ export default function transform (raw: ParametersType): VirtualDOMPropertiesTyp
         ...raw.attributes,
         ...microformats(raw),
       },
+      "dataset": raw.dataset,
       "props": {
         ...raw.props,
         ...raw.properties,

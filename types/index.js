@@ -16,6 +16,7 @@ export type ShorthandsType = {
   data?: {},
   aria?: {},
   attributes?: {},
+  dataset?: {},
   properties?: {},
   styles?: {},
   events?: {[key: string]: Function},
