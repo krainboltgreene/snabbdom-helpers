@@ -5,7 +5,6 @@ A set of functions that map the entire list of the W3C DOM elements. Each functi
 ![Version][BADGE_VERSION]
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
-![Dependencies][BADGE_DEPENDENCY]
 
 
 ## using
@@ -178,4 +177,3 @@ It should output (minus white-spacing):
 [BADGE_TRAVIS]: https://img.shields.io/travis/krainboltgreene/hsdk.js.svg?maxAge=2592000&style=flat-square
 [BADGE_VERSION]: https://img.shields.io/npm/v/hsdk.svg?maxAge=2592000&style=flat-square
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
-[BADGE_DEPENDENCY]: https://img.shields.io/david/krainboltgreene/hsdk.js.svg?maxAge=2592000&style=flat-square
