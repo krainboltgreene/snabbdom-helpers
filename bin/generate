@@ -244,7 +244,7 @@ File.write(
       })
 
       test("data", ({similar, end}) => {
-        similar(#{name}({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+        similar(#{name}({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
         end()
       })
 
@@ -363,7 +363,7 @@ File.write(
             "attrs": {yyy: "y"},
             "data": {
               id: "1",
-              name: "Kurtis",
+              attributes: {NAME: "Kurtis Rainbolt-Greene"},
             },
             "style": {border: "1px"},
             "on": {click: () => null},
@@ -374,7 +374,7 @@ File.write(
             },
             "hook": {insert: () => null},
           })),
-          "<#{element} id=\\"b\\" class=\\"c d active\\" yyy=\\"y\\" xxx=\\"x\\" data-name=\\"Kurtis\\" data-id=\\"1\\" aria-role=\\"navigation\\" title=\\"x\\" href=\\"/a\\" style=\\"border: 1px\\">test</#{element}>"
+          "<#{element} id=\\"b\\" class=\\"c d active\\" yyy=\\"y\\" xxx=\\"x\\" data-attributes-NAME=\\"Kurtis Rainbolt-Greene\\" data-id=\\"1\\" aria-role=\\"navigation\\" title=\\"x\\" href=\\"/a\\" style=\\"border: 1px\\">test</#{element}>"
         )
         end()
       })
