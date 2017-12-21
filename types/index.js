@@ -19,6 +19,7 @@ export type ShorthandsType = {
   dataset?: {},
   properties?: {},
   styles?: {},
+  classes?: {[key: string]: boolean},
   events?: {[key: string]: Function},
   hooks?: {[key: string]: Function},
   lifecycle?: {[key: string]: Function},

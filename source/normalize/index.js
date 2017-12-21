@@ -29,7 +29,10 @@ export default function transform (raw: ParametersType): VirtualDOMPropertiesTyp
         ...raw.on,
         ...raw.events,
       },
-      "class": raw.class,
+      "class": {
+        ...raw.class,
+        ...raw.classes,
+      },
       "hook": {
         ...raw.hook,
         ...raw.hooks,
