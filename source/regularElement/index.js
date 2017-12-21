@@ -5,7 +5,6 @@ import normalize from "../normalize"
 import type {ParametersType} from "types"
 import type {VirtualDOMNodeType} from "types"
 
-const EMPTY_CONTENT = ""
 const EMPTY_SELECTOR = ""
 
 export default function regularElement (parameters: ParametersType): Function {
@@ -17,6 +16,6 @@ export default function regularElement (parameters: ParametersType): Function {
       return helper(`${name}${selector || EMPTY_SELECTOR}`, normalize(parameters), [children])
     }
 
-    return helper(`${name}${selector || EMPTY_SELECTOR}`, normalize(parameters), children || EMPTY_CONTENT)
+    return helper(`${name}${selector || EMPTY_SELECTOR}`, normalize(parameters), children)
   }
 }

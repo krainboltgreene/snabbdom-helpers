@@ -129,8 +129,25 @@ const toHTMLWithPlugins = plugins([
   modules.style,
 ])
 
-test("empty", ({similar, end}) => {
-  similar(a(), {sel: "a"})
+test("empty", ({same, end}) => {
+  same(
+    a(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "a",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -166,6 +183,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(a({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    a({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "a#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -275,8 +345,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(abbr(), {sel: "abbr"})
+test("empty", ({same, end}) => {
+  same(
+    abbr(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "abbr",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -312,6 +399,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(abbr({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    abbr({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "abbr#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -421,8 +561,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(address(), {sel: "address"})
+test("empty", ({same, end}) => {
+  same(
+    address(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "address",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -458,6 +615,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(address({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    address({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "address#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -567,8 +777,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(article(), {sel: "article"})
+test("empty", ({same, end}) => {
+  same(
+    article(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "article",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -604,6 +831,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(article({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    article({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "article#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -713,8 +993,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(aside(), {sel: "aside"})
+test("empty", ({same, end}) => {
+  same(
+    aside(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "aside",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -750,6 +1047,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(aside({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    aside({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "aside#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -859,8 +1209,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(audio(), {sel: "audio"})
+test("empty", ({same, end}) => {
+  same(
+    audio(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "audio",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -896,6 +1263,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(audio({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    audio({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "audio#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -1005,8 +1425,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(b(), {sel: "b"})
+test("empty", ({same, end}) => {
+  same(
+    b(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "b",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -1042,6 +1479,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(b({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    b({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "b#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -1151,8 +1641,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(bdi(), {sel: "bdi"})
+test("empty", ({same, end}) => {
+  same(
+    bdi(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "bdi",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -1188,6 +1695,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(bdi({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    bdi({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "bdi#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -1297,8 +1857,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(bdo(), {sel: "bdo"})
+test("empty", ({same, end}) => {
+  same(
+    bdo(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "bdo",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -1334,6 +1911,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(bdo({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    bdo({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "bdo#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -1443,8 +2073,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(bgsound(), {sel: "bgsound"})
+test("empty", ({same, end}) => {
+  same(
+    bgsound(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "bgsound",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -1480,6 +2127,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(bgsound({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    bgsound({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "bgsound#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -1589,8 +2289,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(blockquote(), {sel: "blockquote"})
+test("empty", ({same, end}) => {
+  same(
+    blockquote(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "blockquote",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -1626,6 +2343,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(blockquote({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    blockquote({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "blockquote#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -1735,8 +2505,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(body(), {sel: "body"})
+test("empty", ({same, end}) => {
+  same(
+    body(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "body",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -1772,6 +2559,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(body({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    body({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "body#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -1881,8 +2721,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(button(), {sel: "button"})
+test("empty", ({same, end}) => {
+  same(
+    button(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "button",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -1918,6 +2775,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(button({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    button({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "button#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -2027,8 +2937,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(canvas(), {sel: "canvas"})
+test("empty", ({same, end}) => {
+  same(
+    canvas(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "canvas",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -2064,6 +2991,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(canvas({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    canvas({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "canvas#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -2173,8 +3153,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(caption(), {sel: "caption"})
+test("empty", ({same, end}) => {
+  same(
+    caption(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "caption",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -2210,6 +3207,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(caption({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    caption({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "caption#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -2319,8 +3369,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(cite(), {sel: "cite"})
+test("empty", ({same, end}) => {
+  same(
+    cite(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "cite",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -2356,6 +3423,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(cite({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    cite({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "cite#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -2465,8 +3585,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(code(), {sel: "code"})
+test("empty", ({same, end}) => {
+  same(
+    code(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "code",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -2502,6 +3639,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(code({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    code({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "code#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -2611,8 +3801,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(colgroup(), {sel: "colgroup"})
+test("empty", ({same, end}) => {
+  same(
+    colgroup(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "colgroup",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -2648,6 +3855,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(colgroup({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    colgroup({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "colgroup#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -2757,8 +4017,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(data(), {sel: "data"})
+test("empty", ({same, end}) => {
+  same(
+    data(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "data",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -2794,6 +4071,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(data({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    data({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "data#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -2903,8 +4233,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(datalist(), {sel: "datalist"})
+test("empty", ({same, end}) => {
+  same(
+    datalist(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "datalist",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -2940,6 +4287,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(datalist({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    datalist({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "datalist#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -3049,8 +4449,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(dd(), {sel: "dd"})
+test("empty", ({same, end}) => {
+  same(
+    dd(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "dd",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -3086,6 +4503,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(dd({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    dd({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "dd#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -3195,8 +4665,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(del(), {sel: "del"})
+test("empty", ({same, end}) => {
+  same(
+    del(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "del",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -3232,6 +4719,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(del({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    del({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "del#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -3341,8 +4881,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(details(), {sel: "details"})
+test("empty", ({same, end}) => {
+  same(
+    details(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "details",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -3378,6 +4935,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(details({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    details({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "details#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -3487,8 +5097,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(dfn(), {sel: "dfn"})
+test("empty", ({same, end}) => {
+  same(
+    dfn(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "dfn",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -3524,6 +5151,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(dfn({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    dfn({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "dfn#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -3633,8 +5313,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(dir(), {sel: "dir"})
+test("empty", ({same, end}) => {
+  same(
+    dir(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "dir",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -3670,6 +5367,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(dir({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    dir({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "dir#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -3779,8 +5529,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(div(), {sel: "div"})
+test("empty", ({same, end}) => {
+  same(
+    div(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "div",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -3816,6 +5583,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(div({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    div({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "div#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -3925,8 +5745,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(dl(), {sel: "dl"})
+test("empty", ({same, end}) => {
+  same(
+    dl(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "dl",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -3962,6 +5799,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(dl({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    dl({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "dl#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -4071,8 +5961,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(dt(), {sel: "dt"})
+test("empty", ({same, end}) => {
+  same(
+    dt(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "dt",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -4108,6 +6015,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(dt({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    dt({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "dt#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -4217,8 +6177,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(em(), {sel: "em"})
+test("empty", ({same, end}) => {
+  same(
+    em(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "em",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -4254,6 +6231,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(em({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    em({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "em#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -4363,8 +6393,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(fieldset(), {sel: "fieldset"})
+test("empty", ({same, end}) => {
+  same(
+    fieldset(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "fieldset",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -4400,6 +6447,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(fieldset({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    fieldset({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "fieldset#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -4509,8 +6609,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(figcaption(), {sel: "figcaption"})
+test("empty", ({same, end}) => {
+  same(
+    figcaption(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "figcaption",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -4546,6 +6663,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(figcaption({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    figcaption({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "figcaption#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -4655,8 +6825,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(figure(), {sel: "figure"})
+test("empty", ({same, end}) => {
+  same(
+    figure(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "figure",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -4692,6 +6879,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(figure({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    figure({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "figure#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -4801,8 +7041,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(footer(), {sel: "footer"})
+test("empty", ({same, end}) => {
+  same(
+    footer(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "footer",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -4838,6 +7095,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(footer({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    footer({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "footer#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -4947,8 +7257,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(form(), {sel: "form"})
+test("empty", ({same, end}) => {
+  same(
+    form(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "form",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -4984,6 +7311,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(form({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    form({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "form#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -5093,8 +7473,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(h1(), {sel: "h1"})
+test("empty", ({same, end}) => {
+  same(
+    h1(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "h1",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -5130,6 +7527,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(h1({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    h1({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "h1#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -5239,8 +7689,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(h2(), {sel: "h2"})
+test("empty", ({same, end}) => {
+  same(
+    h2(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "h2",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -5276,6 +7743,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(h2({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    h2({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "h2#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -5385,8 +7905,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(h3(), {sel: "h3"})
+test("empty", ({same, end}) => {
+  same(
+    h3(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "h3",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -5422,6 +7959,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(h3({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    h3({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "h3#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -5531,8 +8121,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(h4(), {sel: "h4"})
+test("empty", ({same, end}) => {
+  same(
+    h4(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "h4",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -5568,6 +8175,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(h4({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    h4({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "h4#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -5677,8 +8337,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(h5(), {sel: "h5"})
+test("empty", ({same, end}) => {
+  same(
+    h5(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "h5",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -5714,6 +8391,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(h5({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    h5({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "h5#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -5823,8 +8553,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(h6(), {sel: "h6"})
+test("empty", ({same, end}) => {
+  same(
+    h6(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "h6",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -5860,6 +8607,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(h6({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    h6({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "h6#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -5969,8 +8769,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(head(), {sel: "head"})
+test("empty", ({same, end}) => {
+  same(
+    head(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "head",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -6006,6 +8823,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(head({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    head({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "head#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -6115,8 +8985,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(header(), {sel: "header"})
+test("empty", ({same, end}) => {
+  same(
+    header(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "header",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -6152,6 +9039,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(header({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    header({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "header#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -6261,8 +9201,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(hgroup(), {sel: "hgroup"})
+test("empty", ({same, end}) => {
+  same(
+    hgroup(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "hgroup",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -6298,6 +9255,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(hgroup({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    hgroup({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "hgroup#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -6407,8 +9417,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(html(), {sel: "html"})
+test("empty", ({same, end}) => {
+  same(
+    html(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "html",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -6444,6 +9471,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(html({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    html({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "html#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -6553,8 +9633,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(i(), {sel: "i"})
+test("empty", ({same, end}) => {
+  same(
+    i(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "i",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -6590,6 +9687,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(i({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    i({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "i#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -6699,8 +9849,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(iframe(), {sel: "iframe"})
+test("empty", ({same, end}) => {
+  same(
+    iframe(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "iframe",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -6736,6 +9903,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(iframe({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    iframe({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "iframe#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -6845,8 +10065,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(ins(), {sel: "ins"})
+test("empty", ({same, end}) => {
+  same(
+    ins(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "ins",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -6882,6 +10119,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(ins({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    ins({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "ins#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -6991,8 +10281,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(kbd(), {sel: "kbd"})
+test("empty", ({same, end}) => {
+  same(
+    kbd(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "kbd",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -7028,6 +10335,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(kbd({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    kbd({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "kbd#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -7137,8 +10497,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(label(), {sel: "label"})
+test("empty", ({same, end}) => {
+  same(
+    label(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "label",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -7174,6 +10551,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(label({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    label({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "label#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -7283,8 +10713,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(legend(), {sel: "legend"})
+test("empty", ({same, end}) => {
+  same(
+    legend(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "legend",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -7320,6 +10767,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(legend({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    legend({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "legend#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -7429,8 +10929,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(li(), {sel: "li"})
+test("empty", ({same, end}) => {
+  same(
+    li(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "li",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -7466,6 +10983,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(li({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    li({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "li#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -7575,8 +11145,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(main(), {sel: "main"})
+test("empty", ({same, end}) => {
+  same(
+    main(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "main",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -7612,6 +11199,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(main({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    main({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "main#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -7721,8 +11361,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(map(), {sel: "map"})
+test("empty", ({same, end}) => {
+  same(
+    map(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "map",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -7758,6 +11415,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(map({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    map({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "map#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -7867,8 +11577,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(mark(), {sel: "mark"})
+test("empty", ({same, end}) => {
+  same(
+    mark(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "mark",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -7904,6 +11631,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(mark({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    mark({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "mark#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -8013,8 +11793,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(menu(), {sel: "menu"})
+test("empty", ({same, end}) => {
+  same(
+    menu(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "menu",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -8050,6 +11847,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(menu({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    menu({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "menu#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -8159,8 +12009,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(menuitem(), {sel: "menuitem"})
+test("empty", ({same, end}) => {
+  same(
+    menuitem(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "menuitem",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -8196,6 +12063,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(menuitem({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    menuitem({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "menuitem#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -8305,8 +12225,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(meter(), {sel: "meter"})
+test("empty", ({same, end}) => {
+  same(
+    meter(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "meter",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -8342,6 +12279,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(meter({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    meter({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "meter#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -8451,8 +12441,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(nav(), {sel: "nav"})
+test("empty", ({same, end}) => {
+  same(
+    nav(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "nav",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -8488,6 +12495,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(nav({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    nav({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "nav#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -8597,8 +12657,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(nobr(), {sel: "nobr"})
+test("empty", ({same, end}) => {
+  same(
+    nobr(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "nobr",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -8634,6 +12711,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(nobr({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    nobr({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "nobr#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -8743,8 +12873,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(noframes(), {sel: "noframes"})
+test("empty", ({same, end}) => {
+  same(
+    noframes(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "noframes",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -8780,6 +12927,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(noframes({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    noframes({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "noframes#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -8889,8 +13089,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(noscript(), {sel: "noscript"})
+test("empty", ({same, end}) => {
+  same(
+    noscript(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "noscript",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -8926,6 +13143,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(noscript({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    noscript({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "noscript#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -9035,8 +13305,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(object(), {sel: "object"})
+test("empty", ({same, end}) => {
+  same(
+    object(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "object",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -9072,6 +13359,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(object({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    object({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "object#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -9181,8 +13521,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(ol(), {sel: "ol"})
+test("empty", ({same, end}) => {
+  same(
+    ol(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "ol",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -9218,6 +13575,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(ol({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    ol({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "ol#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -9327,8 +13737,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(optgroup(), {sel: "optgroup"})
+test("empty", ({same, end}) => {
+  same(
+    optgroup(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "optgroup",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -9364,6 +13791,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(optgroup({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    optgroup({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "optgroup#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -9473,8 +13953,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(option(), {sel: "option"})
+test("empty", ({same, end}) => {
+  same(
+    option(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "option",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -9510,6 +14007,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(option({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    option({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "option#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -9619,8 +14169,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(output(), {sel: "output"})
+test("empty", ({same, end}) => {
+  same(
+    output(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "output",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -9656,6 +14223,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(output({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    output({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "output#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -9765,8 +14385,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(p(), {sel: "p"})
+test("empty", ({same, end}) => {
+  same(
+    p(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "p",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -9802,6 +14439,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(p({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    p({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "p#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -9911,8 +14601,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(picture(), {sel: "picture"})
+test("empty", ({same, end}) => {
+  same(
+    picture(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "picture",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -9948,6 +14655,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(picture({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    picture({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "picture#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -10057,8 +14817,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(pre(), {sel: "pre"})
+test("empty", ({same, end}) => {
+  same(
+    pre(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "pre",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -10094,6 +14871,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(pre({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    pre({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "pre#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -10203,8 +15033,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(progress(), {sel: "progress"})
+test("empty", ({same, end}) => {
+  same(
+    progress(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "progress",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -10240,6 +15087,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(progress({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    progress({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "progress#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -10349,8 +15249,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(q(), {sel: "q"})
+test("empty", ({same, end}) => {
+  same(
+    q(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "q",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -10386,6 +15303,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(q({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    q({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "q#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -10495,8 +15465,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(rp(), {sel: "rp"})
+test("empty", ({same, end}) => {
+  same(
+    rp(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "rp",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -10532,6 +15519,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(rp({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    rp({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "rp#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -10641,8 +15681,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(rt(), {sel: "rt"})
+test("empty", ({same, end}) => {
+  same(
+    rt(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "rt",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -10678,6 +15735,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(rt({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    rt({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "rt#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -10787,8 +15897,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(rtc(), {sel: "rtc"})
+test("empty", ({same, end}) => {
+  same(
+    rtc(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "rtc",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -10824,6 +15951,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(rtc({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    rtc({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "rtc#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -10933,8 +16113,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(ruby(), {sel: "ruby"})
+test("empty", ({same, end}) => {
+  same(
+    ruby(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "ruby",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -10970,6 +16167,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(ruby({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    ruby({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "ruby#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -11079,8 +16329,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(s(), {sel: "s"})
+test("empty", ({same, end}) => {
+  same(
+    s(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "s",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -11116,6 +16383,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(s({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    s({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "s#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -11225,8 +16545,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(samp(), {sel: "samp"})
+test("empty", ({same, end}) => {
+  same(
+    samp(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "samp",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -11262,6 +16599,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(samp({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    samp({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "samp#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -11371,8 +16761,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(script(), {sel: "script"})
+test("empty", ({same, end}) => {
+  same(
+    script(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "script",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -11408,6 +16815,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(script({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    script({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "script#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -11517,8 +16977,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(section(), {sel: "section"})
+test("empty", ({same, end}) => {
+  same(
+    section(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "section",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -11554,6 +17031,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(section({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    section({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "section#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -11663,8 +17193,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(select(), {sel: "select"})
+test("empty", ({same, end}) => {
+  same(
+    select(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "select",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -11700,6 +17247,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(select({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    select({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "select#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -11809,8 +17409,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(small(), {sel: "small"})
+test("empty", ({same, end}) => {
+  same(
+    small(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "small",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -11846,6 +17463,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(small({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    small({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "small#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -11955,8 +17625,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(span(), {sel: "span"})
+test("empty", ({same, end}) => {
+  same(
+    span(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "span",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -11992,6 +17679,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(span({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    span({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "span#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -12101,8 +17841,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(strong(), {sel: "strong"})
+test("empty", ({same, end}) => {
+  same(
+    strong(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "strong",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -12138,6 +17895,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(strong({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    strong({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "strong#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -12247,8 +18057,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(style(), {sel: "style"})
+test("empty", ({same, end}) => {
+  same(
+    style(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "style",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -12284,6 +18111,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(style({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    style({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "style#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -12393,8 +18273,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(sub(), {sel: "sub"})
+test("empty", ({same, end}) => {
+  same(
+    sub(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "sub",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -12430,6 +18327,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(sub({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    sub({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "sub#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -12539,8 +18489,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(summary(), {sel: "summary"})
+test("empty", ({same, end}) => {
+  same(
+    summary(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "summary",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -12576,6 +18543,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(summary({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    summary({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "summary#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -12685,8 +18705,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(sup(), {sel: "sup"})
+test("empty", ({same, end}) => {
+  same(
+    sup(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "sup",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -12722,6 +18759,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(sup({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    sup({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "sup#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -12831,8 +18921,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(table(), {sel: "table"})
+test("empty", ({same, end}) => {
+  same(
+    table(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "table",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -12868,6 +18975,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(table({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    table({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "table#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -12977,8 +19137,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(tbody(), {sel: "tbody"})
+test("empty", ({same, end}) => {
+  same(
+    tbody(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "tbody",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -13014,6 +19191,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(tbody({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    tbody({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "tbody#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -13123,8 +19353,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(td(), {sel: "td"})
+test("empty", ({same, end}) => {
+  same(
+    td(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "td",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -13160,6 +19407,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(td({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    td({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "td#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -13269,8 +19569,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(template(), {sel: "template"})
+test("empty", ({same, end}) => {
+  same(
+    template(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "template",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -13306,6 +19623,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(template({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    template({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "template#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -13415,8 +19785,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(textarea(), {sel: "textarea"})
+test("empty", ({same, end}) => {
+  same(
+    textarea(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "textarea",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -13452,6 +19839,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(textarea({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    textarea({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "textarea#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -13561,8 +20001,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(tfoot(), {sel: "tfoot"})
+test("empty", ({same, end}) => {
+  same(
+    tfoot(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "tfoot",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -13598,6 +20055,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(tfoot({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    tfoot({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "tfoot#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -13707,8 +20217,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(th(), {sel: "th"})
+test("empty", ({same, end}) => {
+  same(
+    th(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "th",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -13744,6 +20271,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(th({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    th({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "th#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -13853,8 +20433,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(thead(), {sel: "thead"})
+test("empty", ({same, end}) => {
+  same(
+    thead(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "thead",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -13890,6 +20487,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(thead({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    thead({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "thead#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -13999,8 +20649,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(time(), {sel: "time"})
+test("empty", ({same, end}) => {
+  same(
+    time(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "time",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -14036,6 +20703,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(time({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    time({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "time#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -14145,8 +20865,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(title(), {sel: "title"})
+test("empty", ({same, end}) => {
+  same(
+    title(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "title",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -14182,6 +20919,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(title({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    title({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "title#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -14291,8 +21081,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(tr(), {sel: "tr"})
+test("empty", ({same, end}) => {
+  same(
+    tr(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "tr",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -14328,6 +21135,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(tr({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    tr({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "tr#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -14437,8 +21297,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(u(), {sel: "u"})
+test("empty", ({same, end}) => {
+  same(
+    u(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "u",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -14474,6 +21351,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(u({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    u({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "u#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -14583,8 +21513,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(ul(), {sel: "ul"})
+test("empty", ({same, end}) => {
+  same(
+    ul(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "ul",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -14620,6 +21567,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(ul({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    ul({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "ul#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -14729,8 +21729,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(_var(), {sel: "var"})
+test("empty", ({same, end}) => {
+  same(
+    _var(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "var",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -14766,6 +21783,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(_var({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    _var({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "var#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -14875,8 +21945,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(video(), {sel: "video"})
+test("empty", ({same, end}) => {
+  same(
+    video(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "video",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -14912,6 +21999,59 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(video({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    video({
+      "selector": "#b.c.d",
+      "children": "test",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "video#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: "test",
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -15021,8 +22161,25 @@ test("html with plugins", ({equal, end}) => {
   end()
 })
 
-test("empty", ({similar, end}) => {
-  similar(area(), {sel: "area"})
+test("empty", ({same, end}) => {
+  same(
+    area(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "area",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -15058,6 +22215,58 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(area({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    area({
+      "selector": "#b.c.d",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "area#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: undefined,
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -15165,8 +22374,25 @@ test("html with plugins", ({equal, end}) => {
 })
 
 
-test("empty", ({similar, end}) => {
-  similar(base(), {sel: "base"})
+test("empty", ({same, end}) => {
+  same(
+    base(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "base",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -15202,6 +22428,58 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(base({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    base({
+      "selector": "#b.c.d",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "base#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: undefined,
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -15309,8 +22587,25 @@ test("html with plugins", ({equal, end}) => {
 })
 
 
-test("empty", ({similar, end}) => {
-  similar(br(), {sel: "br"})
+test("empty", ({same, end}) => {
+  same(
+    br(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "br",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -15346,6 +22641,58 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(br({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    br({
+      "selector": "#b.c.d",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "br#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: undefined,
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -15453,8 +22800,25 @@ test("html with plugins", ({equal, end}) => {
 })
 
 
-test("empty", ({similar, end}) => {
-  similar(col(), {sel: "col"})
+test("empty", ({same, end}) => {
+  same(
+    col(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "col",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -15490,6 +22854,58 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(col({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    col({
+      "selector": "#b.c.d",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "col#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: undefined,
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -15597,8 +23013,25 @@ test("html with plugins", ({equal, end}) => {
 })
 
 
-test("empty", ({similar, end}) => {
-  similar(embed(), {sel: "embed"})
+test("empty", ({same, end}) => {
+  same(
+    embed(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "embed",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -15634,6 +23067,58 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(embed({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    embed({
+      "selector": "#b.c.d",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "embed#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: undefined,
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -15741,8 +23226,25 @@ test("html with plugins", ({equal, end}) => {
 })
 
 
-test("empty", ({similar, end}) => {
-  similar(hr(), {sel: "hr"})
+test("empty", ({same, end}) => {
+  same(
+    hr(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "hr",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -15778,6 +23280,58 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(hr({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    hr({
+      "selector": "#b.c.d",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "hr#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: undefined,
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -15885,8 +23439,25 @@ test("html with plugins", ({equal, end}) => {
 })
 
 
-test("empty", ({similar, end}) => {
-  similar(img(), {sel: "img"})
+test("empty", ({same, end}) => {
+  same(
+    img(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "img",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -15922,6 +23493,58 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(img({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    img({
+      "selector": "#b.c.d",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "img#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: undefined,
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -16029,8 +23652,25 @@ test("html with plugins", ({equal, end}) => {
 })
 
 
-test("empty", ({similar, end}) => {
-  similar(input(), {sel: "input"})
+test("empty", ({same, end}) => {
+  same(
+    input(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "input",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -16066,6 +23706,58 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(input({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    input({
+      "selector": "#b.c.d",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "input#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: undefined,
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -16173,8 +23865,25 @@ test("html with plugins", ({equal, end}) => {
 })
 
 
-test("empty", ({similar, end}) => {
-  similar(link(), {sel: "link"})
+test("empty", ({same, end}) => {
+  same(
+    link(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "link",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -16210,6 +23919,58 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(link({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    link({
+      "selector": "#b.c.d",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "link#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: undefined,
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -16317,8 +24078,25 @@ test("html with plugins", ({equal, end}) => {
 })
 
 
-test("empty", ({similar, end}) => {
-  similar(meta(), {sel: "meta"})
+test("empty", ({same, end}) => {
+  same(
+    meta(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "meta",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -16354,6 +24132,58 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(meta({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    meta({
+      "selector": "#b.c.d",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "meta#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: undefined,
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -16461,8 +24291,25 @@ test("html with plugins", ({equal, end}) => {
 })
 
 
-test("empty", ({similar, end}) => {
-  similar(param(), {sel: "param"})
+test("empty", ({same, end}) => {
+  same(
+    param(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "param",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -16498,6 +24345,58 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(param({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    param({
+      "selector": "#b.c.d",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "param#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: undefined,
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -16605,8 +24504,25 @@ test("html with plugins", ({equal, end}) => {
 })
 
 
-test("empty", ({similar, end}) => {
-  similar(source(), {sel: "source"})
+test("empty", ({same, end}) => {
+  same(
+    source(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "source",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -16642,6 +24558,58 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(source({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    source({
+      "selector": "#b.c.d",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "source#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: undefined,
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -16749,8 +24717,25 @@ test("html with plugins", ({equal, end}) => {
 })
 
 
-test("empty", ({similar, end}) => {
-  similar(track(), {sel: "track"})
+test("empty", ({same, end}) => {
+  same(
+    track(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "track",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -16786,6 +24771,58 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(track({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    track({
+      "selector": "#b.c.d",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "track#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: undefined,
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 
@@ -16893,8 +24930,25 @@ test("html with plugins", ({equal, end}) => {
 })
 
 
-test("empty", ({similar, end}) => {
-  similar(wbr(), {sel: "wbr"})
+test("empty", ({same, end}) => {
+  same(
+    wbr(),
+    {
+      "children": undefined,
+      "data": {
+        "attrs": {},
+        "class": {},
+        "hook": {},
+        "on": {},
+        "props": {},
+        "style": {},
+      },
+      "elm": undefined,
+      "key": undefined,
+      "sel": "wbr",
+      "text": undefined,
+    }
+  )
   end()
 })
 
@@ -16930,6 +24984,58 @@ test("aria", ({similar, end}) => {
 
 test("data", ({similar, end}) => {
   similar(wbr({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+  end()
+})
+
+test("full without functions", ({same, end}) => {
+  same(
+    wbr({
+      "selector": "#b.c.d",
+      "props": {title: "x"},
+      "properties": {href: "/a"},
+      "attributes": {xxx: "x"},
+      "attrs": {yyy: "y"},
+      "data": {
+        id: "1",
+        name: "Kurtis",
+      },
+      "style": {border: "1px"},
+      "aria": {role: "navigation"},
+      "class": {
+        active: true,
+        ignored: false,
+      },
+      "key": "key",
+    }),
+    {
+      sel: "wbr#b.c.d",
+      data: {
+        "attrs": {
+          "yyy": "y",
+          "xxx": "x",
+          "data-name": "Kurtis",
+          "data-id": "1",
+          "aria-role": "navigation",
+        },
+        "props": {
+          title: "x",
+          href: "/a"
+        },
+        "style": {border: "1px"},
+        "class": {
+          active: true,
+          ignored: false,
+        },
+        "hook": {},
+        "on": {},
+        "key": "key",
+      },
+      children: undefined,
+      text: undefined,
+      elm: undefined,
+      key: "key",
+    }
+  )
   end()
 })
 

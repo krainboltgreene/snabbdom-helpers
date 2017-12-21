@@ -191,8 +191,25 @@ File.write(
       element = if tag.kind_of?(Array) then tag[1] else tag end
 
       <<~CASES
-      test("empty", ({similar, end}) => {
-        similar(#{name}(), {sel: "#{element}"})
+      test("empty", ({same, end}) => {
+        same(
+          #{name}(),
+          {
+            "children": undefined,
+            "data": {
+              "attrs": {},
+              "class": {},
+              "hook": {},
+              "on": {},
+              "props": {},
+              "style": {},
+            },
+            "elm": undefined,
+            "key": undefined,
+            "sel": "#{element}",
+            "text": undefined,
+          }
+        )
         end()
       })
 
@@ -228,6 +245,59 @@ File.write(
 
       test("data", ({similar, end}) => {
         similar(#{name}({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+        end()
+      })
+
+      test("full without functions", ({same, end}) => {
+        same(
+          #{name}({
+            "selector": "#b.c.d",
+            "children": "test",
+            "props": {title: "x"},
+            "properties": {href: "/a"},
+            "attributes": {xxx: "x"},
+            "attrs": {yyy: "y"},
+            "data": {
+              id: "1",
+              name: "Kurtis",
+            },
+            "style": {border: "1px"},
+            "aria": {role: "navigation"},
+            "class": {
+              active: true,
+              ignored: false,
+            },
+            "key": "key",
+          }),
+          {
+            sel: "#{element}#b.c.d",
+            data: {
+              "attrs": {
+                "yyy": "y",
+                "xxx": "x",
+                "data-name": "Kurtis",
+                "data-id": "1",
+                "aria-role": "navigation",
+              },
+              "props": {
+                title: "x",
+                href: "/a"
+              },
+              "style": {border: "1px"},
+              "class": {
+                active: true,
+                ignored: false,
+              },
+              "hook": {},
+              "on": {},
+              "key": "key",
+            },
+            children: undefined,
+            text: "test",
+            elm: undefined,
+            key: "key",
+          }
+        )
         end()
       })
 
@@ -345,8 +415,25 @@ File.write(
       element = if tag.kind_of?(Array) then tag[1] else tag end
 
       <<~CASES
-      test("empty", ({similar, end}) => {
-        similar(#{name}(), {sel: "#{element}"})
+      test("empty", ({same, end}) => {
+        same(
+          #{name}(),
+          {
+            "children": undefined,
+            "data": {
+              "attrs": {},
+              "class": {},
+              "hook": {},
+              "on": {},
+              "props": {},
+              "style": {},
+            },
+            "elm": undefined,
+            "key": undefined,
+            "sel": "#{element}",
+            "text": undefined,
+          }
+        )
         end()
       })
 
@@ -382,6 +469,58 @@ File.write(
 
       test("data", ({similar, end}) => {
         similar(#{name}({data: {id: "1"}}), {data: {attrs: {"data-id": "1"}}})
+        end()
+      })
+
+      test("full without functions", ({same, end}) => {
+        same(
+          #{name}({
+            "selector": "#b.c.d",
+            "props": {title: "x"},
+            "properties": {href: "/a"},
+            "attributes": {xxx: "x"},
+            "attrs": {yyy: "y"},
+            "data": {
+              id: "1",
+              name: "Kurtis",
+            },
+            "style": {border: "1px"},
+            "aria": {role: "navigation"},
+            "class": {
+              active: true,
+              ignored: false,
+            },
+            "key": "key",
+          }),
+          {
+            sel: "#{element}#b.c.d",
+            data: {
+              "attrs": {
+                "yyy": "y",
+                "xxx": "x",
+                "data-name": "Kurtis",
+                "data-id": "1",
+                "aria-role": "navigation",
+              },
+              "props": {
+                title: "x",
+                href: "/a"
+              },
+              "style": {border: "1px"},
+              "class": {
+                active: true,
+                ignored: false,
+              },
+              "hook": {},
+              "on": {},
+              "key": "key",
+            },
+            children: undefined,
+            text: undefined,
+            elm: undefined,
+            key: "key",
+          }
+        )
         end()
       })
 
