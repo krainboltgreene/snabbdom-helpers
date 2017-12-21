@@ -125,17 +125,11 @@ File.write(
   File.join(".", "source", "index.js"),
   <<~INDEX
   /* eslint-disable max-lines, func-style, id-length, no-underscore-dangle */
-  import domElement from "snabbdom/h"
+  import regularElement from "./regularElement"
+  import voidElement from "./voidElement"
 
-  import normalize from "./normalize"
-
-  import type {ParametersType} from "types"
   import type {VirtualDOMNodeType} from "types"
-
-  const EMPTY_ERROR_MESSAGE = "Empty tags cannot semantically have children."
-  const EMPTY_PARAMETERS = {}
-  const EMPTY_CONTENT = ""
-  const EMPTY_SELECTOR = ""
+  import type {ParametersType} from "types"
 
   #{
     CONTENT_TAGS.map do |tag|
@@ -144,13 +138,7 @@ File.write(
 
       <<~DEFINITION
         export function #{name} (parameters: ParametersType): VirtualDOMNodeType {
-          const {children, selector}: {children?: mixed, selector?: string} = parameters || EMPTY_PARAMETERS
-
-          if (children instanceof Function) {
-            return domElement(`#{element}${selector || EMPTY_SELECTOR}`, normalize(parameters), [children])
-          }
-
-          return domElement(`#{element}${selector || EMPTY_SELECTOR}`, normalize(parameters), children || EMPTY_CONTENT)
+          return regularElement(parameters || {})("#{element}")
         }
       DEFINITION
     end.join("\n")
@@ -162,13 +150,7 @@ File.write(
 
       <<~DEFINITION
       export function #{name} (parameters: ParametersType): VirtualDOMNodeType {
-        const {selector}: {selector?: string} = parameters || EMPTY_PARAMETERS
-
-        if (parameters && parameters.children) {
-          throw new Error(EMPTY_ERROR_MESSAGE)
-        }
-
-        return domElement(`#{element}${selector || EMPTY_SELECTOR}`, normalize(parameters))
+        return voidElement(parameters || {})("#{element}")
       }
       DEFINITION
     end.join("\n")

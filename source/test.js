@@ -182,7 +182,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -202,7 +201,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -235,7 +233,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -245,7 +242,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<a id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</a>"
+    "<a id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</a>"
   )
   end()
 })
@@ -264,7 +261,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -274,7 +270,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<a id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</a>"
+    "<a id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</a>"
   )
   end()
 })
@@ -332,7 +328,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -352,7 +347,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -385,7 +379,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -395,7 +388,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<abbr id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</abbr>"
+    "<abbr id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</abbr>"
   )
   end()
 })
@@ -414,7 +407,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -424,7 +416,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<abbr id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</abbr>"
+    "<abbr id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</abbr>"
   )
   end()
 })
@@ -482,7 +474,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -502,7 +493,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -535,7 +525,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -545,7 +534,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<address id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</address>"
+    "<address id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</address>"
   )
   end()
 })
@@ -564,7 +553,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -574,7 +562,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<address id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</address>"
+    "<address id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</address>"
   )
   end()
 })
@@ -632,7 +620,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -652,7 +639,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -685,7 +671,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -695,7 +680,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<article id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</article>"
+    "<article id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</article>"
   )
   end()
 })
@@ -714,7 +699,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -724,7 +708,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<article id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</article>"
+    "<article id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</article>"
   )
   end()
 })
@@ -782,7 +766,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -802,7 +785,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -835,7 +817,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -845,7 +826,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<aside id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</aside>"
+    "<aside id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</aside>"
   )
   end()
 })
@@ -864,7 +845,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -874,7 +854,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<aside id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</aside>"
+    "<aside id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</aside>"
   )
   end()
 })
@@ -932,7 +912,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -952,7 +931,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -985,7 +963,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -995,7 +972,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<audio id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</audio>"
+    "<audio id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</audio>"
   )
   end()
 })
@@ -1014,7 +991,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -1024,7 +1000,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<audio id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</audio>"
+    "<audio id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</audio>"
   )
   end()
 })
@@ -1082,7 +1058,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -1102,7 +1077,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -1135,7 +1109,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -1145,7 +1118,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<b id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</b>"
+    "<b id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</b>"
   )
   end()
 })
@@ -1164,7 +1137,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -1174,7 +1146,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<b id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</b>"
+    "<b id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</b>"
   )
   end()
 })
@@ -1232,7 +1204,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -1252,7 +1223,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -1285,7 +1255,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -1295,7 +1264,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<bdi id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</bdi>"
+    "<bdi id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</bdi>"
   )
   end()
 })
@@ -1314,7 +1283,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -1324,7 +1292,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<bdi id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</bdi>"
+    "<bdi id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</bdi>"
   )
   end()
 })
@@ -1382,7 +1350,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -1402,7 +1369,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -1435,7 +1401,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -1445,7 +1410,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<bdo id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</bdo>"
+    "<bdo id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</bdo>"
   )
   end()
 })
@@ -1464,7 +1429,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -1474,7 +1438,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<bdo id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</bdo>"
+    "<bdo id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</bdo>"
   )
   end()
 })
@@ -1532,7 +1496,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -1552,7 +1515,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -1585,7 +1547,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -1595,7 +1556,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<bgsound id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</bgsound>"
+    "<bgsound id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</bgsound>"
   )
   end()
 })
@@ -1614,7 +1575,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -1624,7 +1584,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<bgsound id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</bgsound>"
+    "<bgsound id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</bgsound>"
   )
   end()
 })
@@ -1682,7 +1642,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -1702,7 +1661,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -1735,7 +1693,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -1745,7 +1702,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<blockquote id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</blockquote>"
+    "<blockquote id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</blockquote>"
   )
   end()
 })
@@ -1764,7 +1721,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -1774,7 +1730,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<blockquote id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</blockquote>"
+    "<blockquote id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</blockquote>"
   )
   end()
 })
@@ -1832,7 +1788,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -1852,7 +1807,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -1885,7 +1839,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -1895,7 +1848,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<body id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</body>"
+    "<body id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</body>"
   )
   end()
 })
@@ -1914,7 +1867,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -1924,7 +1876,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<body id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</body>"
+    "<body id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</body>"
   )
   end()
 })
@@ -1982,7 +1934,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -2002,7 +1953,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -2035,7 +1985,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -2045,7 +1994,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<button id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</button>"
+    "<button id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</button>"
   )
   end()
 })
@@ -2064,7 +2013,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -2074,7 +2022,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<button id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</button>"
+    "<button id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</button>"
   )
   end()
 })
@@ -2132,7 +2080,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -2152,7 +2099,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -2185,7 +2131,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -2195,7 +2140,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<canvas id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</canvas>"
+    "<canvas id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</canvas>"
   )
   end()
 })
@@ -2214,7 +2159,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -2224,7 +2168,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<canvas id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</canvas>"
+    "<canvas id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</canvas>"
   )
   end()
 })
@@ -2282,7 +2226,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -2302,7 +2245,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -2335,7 +2277,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -2345,7 +2286,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<caption id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</caption>"
+    "<caption id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</caption>"
   )
   end()
 })
@@ -2364,7 +2305,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -2374,7 +2314,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<caption id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</caption>"
+    "<caption id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</caption>"
   )
   end()
 })
@@ -2432,7 +2372,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -2452,7 +2391,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -2485,7 +2423,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -2495,7 +2432,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<cite id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</cite>"
+    "<cite id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</cite>"
   )
   end()
 })
@@ -2514,7 +2451,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -2524,7 +2460,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<cite id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</cite>"
+    "<cite id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</cite>"
   )
   end()
 })
@@ -2582,7 +2518,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -2602,7 +2537,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -2635,7 +2569,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -2645,7 +2578,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<code id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</code>"
+    "<code id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</code>"
   )
   end()
 })
@@ -2664,7 +2597,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -2674,7 +2606,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<code id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</code>"
+    "<code id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</code>"
   )
   end()
 })
@@ -2732,7 +2664,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -2752,7 +2683,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -2785,7 +2715,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -2795,7 +2724,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<colgroup id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</colgroup>"
+    "<colgroup id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</colgroup>"
   )
   end()
 })
@@ -2814,7 +2743,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -2824,7 +2752,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<colgroup id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</colgroup>"
+    "<colgroup id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</colgroup>"
   )
   end()
 })
@@ -2882,7 +2810,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -2902,7 +2829,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -2935,7 +2861,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -2945,7 +2870,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<data id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</data>"
+    "<data id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</data>"
   )
   end()
 })
@@ -2964,7 +2889,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -2974,7 +2898,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<data id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</data>"
+    "<data id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</data>"
   )
   end()
 })
@@ -3032,7 +2956,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -3052,7 +2975,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -3085,7 +3007,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -3095,7 +3016,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<datalist id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</datalist>"
+    "<datalist id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</datalist>"
   )
   end()
 })
@@ -3114,7 +3035,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -3124,7 +3044,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<datalist id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</datalist>"
+    "<datalist id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</datalist>"
   )
   end()
 })
@@ -3182,7 +3102,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -3202,7 +3121,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -3235,7 +3153,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -3245,7 +3162,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<dd id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</dd>"
+    "<dd id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</dd>"
   )
   end()
 })
@@ -3264,7 +3181,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -3274,7 +3190,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<dd id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</dd>"
+    "<dd id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</dd>"
   )
   end()
 })
@@ -3332,7 +3248,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -3352,7 +3267,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -3385,7 +3299,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -3395,7 +3308,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<del id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</del>"
+    "<del id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</del>"
   )
   end()
 })
@@ -3414,7 +3327,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -3424,7 +3336,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<del id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</del>"
+    "<del id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</del>"
   )
   end()
 })
@@ -3482,7 +3394,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -3502,7 +3413,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -3535,7 +3445,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -3545,7 +3454,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<details id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</details>"
+    "<details id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</details>"
   )
   end()
 })
@@ -3564,7 +3473,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -3574,7 +3482,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<details id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</details>"
+    "<details id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</details>"
   )
   end()
 })
@@ -3632,7 +3540,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -3652,7 +3559,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -3685,7 +3591,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -3695,7 +3600,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<dfn id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</dfn>"
+    "<dfn id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</dfn>"
   )
   end()
 })
@@ -3714,7 +3619,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -3724,7 +3628,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<dfn id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</dfn>"
+    "<dfn id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</dfn>"
   )
   end()
 })
@@ -3782,7 +3686,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -3802,7 +3705,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -3835,7 +3737,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -3845,7 +3746,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<dir id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</dir>"
+    "<dir id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</dir>"
   )
   end()
 })
@@ -3864,7 +3765,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -3874,7 +3774,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<dir id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</dir>"
+    "<dir id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</dir>"
   )
   end()
 })
@@ -3932,7 +3832,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -3952,7 +3851,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -3985,7 +3883,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -3995,7 +3892,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<div id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</div>"
+    "<div id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</div>"
   )
   end()
 })
@@ -4014,7 +3911,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -4024,7 +3920,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<div id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</div>"
+    "<div id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</div>"
   )
   end()
 })
@@ -4082,7 +3978,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -4102,7 +3997,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -4135,7 +4029,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -4145,7 +4038,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<dl id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</dl>"
+    "<dl id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</dl>"
   )
   end()
 })
@@ -4164,7 +4057,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -4174,7 +4066,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<dl id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</dl>"
+    "<dl id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</dl>"
   )
   end()
 })
@@ -4232,7 +4124,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -4252,7 +4143,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -4285,7 +4175,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -4295,7 +4184,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<dt id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</dt>"
+    "<dt id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</dt>"
   )
   end()
 })
@@ -4314,7 +4203,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -4324,7 +4212,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<dt id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</dt>"
+    "<dt id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</dt>"
   )
   end()
 })
@@ -4382,7 +4270,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -4402,7 +4289,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -4435,7 +4321,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -4445,7 +4330,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<em id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</em>"
+    "<em id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</em>"
   )
   end()
 })
@@ -4464,7 +4349,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -4474,7 +4358,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<em id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</em>"
+    "<em id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</em>"
   )
   end()
 })
@@ -4532,7 +4416,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -4552,7 +4435,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -4585,7 +4467,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -4595,7 +4476,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<fieldset id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</fieldset>"
+    "<fieldset id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</fieldset>"
   )
   end()
 })
@@ -4614,7 +4495,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -4624,7 +4504,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<fieldset id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</fieldset>"
+    "<fieldset id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</fieldset>"
   )
   end()
 })
@@ -4682,7 +4562,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -4702,7 +4581,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -4735,7 +4613,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -4745,7 +4622,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<figcaption id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</figcaption>"
+    "<figcaption id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</figcaption>"
   )
   end()
 })
@@ -4764,7 +4641,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -4774,7 +4650,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<figcaption id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</figcaption>"
+    "<figcaption id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</figcaption>"
   )
   end()
 })
@@ -4832,7 +4708,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -4852,7 +4727,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -4885,7 +4759,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -4895,7 +4768,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<figure id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</figure>"
+    "<figure id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</figure>"
   )
   end()
 })
@@ -4914,7 +4787,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -4924,7 +4796,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<figure id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</figure>"
+    "<figure id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</figure>"
   )
   end()
 })
@@ -4982,7 +4854,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -5002,7 +4873,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -5035,7 +4905,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -5045,7 +4914,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<footer id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</footer>"
+    "<footer id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</footer>"
   )
   end()
 })
@@ -5064,7 +4933,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -5074,7 +4942,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<footer id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</footer>"
+    "<footer id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</footer>"
   )
   end()
 })
@@ -5132,7 +5000,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -5152,7 +5019,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -5185,7 +5051,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -5195,7 +5060,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<form id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</form>"
+    "<form id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</form>"
   )
   end()
 })
@@ -5214,7 +5079,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -5224,7 +5088,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<form id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</form>"
+    "<form id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</form>"
   )
   end()
 })
@@ -5282,7 +5146,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -5302,7 +5165,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -5335,7 +5197,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -5345,7 +5206,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<h1 id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</h1>"
+    "<h1 id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</h1>"
   )
   end()
 })
@@ -5364,7 +5225,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -5374,7 +5234,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<h1 id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</h1>"
+    "<h1 id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</h1>"
   )
   end()
 })
@@ -5432,7 +5292,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -5452,7 +5311,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -5485,7 +5343,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -5495,7 +5352,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<h2 id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</h2>"
+    "<h2 id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</h2>"
   )
   end()
 })
@@ -5514,7 +5371,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -5524,7 +5380,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<h2 id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</h2>"
+    "<h2 id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</h2>"
   )
   end()
 })
@@ -5582,7 +5438,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -5602,7 +5457,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -5635,7 +5489,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -5645,7 +5498,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<h3 id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</h3>"
+    "<h3 id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</h3>"
   )
   end()
 })
@@ -5664,7 +5517,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -5674,7 +5526,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<h3 id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</h3>"
+    "<h3 id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</h3>"
   )
   end()
 })
@@ -5732,7 +5584,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -5752,7 +5603,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -5785,7 +5635,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -5795,7 +5644,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<h4 id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</h4>"
+    "<h4 id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</h4>"
   )
   end()
 })
@@ -5814,7 +5663,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -5824,7 +5672,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<h4 id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</h4>"
+    "<h4 id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</h4>"
   )
   end()
 })
@@ -5882,7 +5730,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -5902,7 +5749,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -5935,7 +5781,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -5945,7 +5790,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<h5 id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</h5>"
+    "<h5 id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</h5>"
   )
   end()
 })
@@ -5964,7 +5809,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -5974,7 +5818,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<h5 id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</h5>"
+    "<h5 id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</h5>"
   )
   end()
 })
@@ -6032,7 +5876,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -6052,7 +5895,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -6085,7 +5927,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -6095,7 +5936,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<h6 id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</h6>"
+    "<h6 id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</h6>"
   )
   end()
 })
@@ -6114,7 +5955,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -6124,7 +5964,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<h6 id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</h6>"
+    "<h6 id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</h6>"
   )
   end()
 })
@@ -6182,7 +6022,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -6202,7 +6041,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -6235,7 +6073,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -6245,7 +6082,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<head id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</head>"
+    "<head id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</head>"
   )
   end()
 })
@@ -6264,7 +6101,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -6274,7 +6110,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<head id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</head>"
+    "<head id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</head>"
   )
   end()
 })
@@ -6332,7 +6168,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -6352,7 +6187,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -6385,7 +6219,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -6395,7 +6228,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<header id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</header>"
+    "<header id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</header>"
   )
   end()
 })
@@ -6414,7 +6247,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -6424,7 +6256,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<header id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</header>"
+    "<header id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</header>"
   )
   end()
 })
@@ -6482,7 +6314,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -6502,7 +6333,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -6535,7 +6365,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -6545,7 +6374,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<hgroup id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</hgroup>"
+    "<hgroup id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</hgroup>"
   )
   end()
 })
@@ -6564,7 +6393,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -6574,7 +6402,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<hgroup id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</hgroup>"
+    "<hgroup id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</hgroup>"
   )
   end()
 })
@@ -6632,7 +6460,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -6652,7 +6479,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -6685,7 +6511,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -6695,7 +6520,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<html id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</html>"
+    "<html id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</html>"
   )
   end()
 })
@@ -6714,7 +6539,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -6724,7 +6548,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<html id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</html>"
+    "<html id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</html>"
   )
   end()
 })
@@ -6782,7 +6606,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -6802,7 +6625,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -6835,7 +6657,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -6845,7 +6666,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<i id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</i>"
+    "<i id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</i>"
   )
   end()
 })
@@ -6864,7 +6685,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -6874,7 +6694,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<i id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</i>"
+    "<i id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</i>"
   )
   end()
 })
@@ -6932,7 +6752,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -6952,7 +6771,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -6985,7 +6803,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -6995,7 +6812,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<iframe id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</iframe>"
+    "<iframe id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</iframe>"
   )
   end()
 })
@@ -7014,7 +6831,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -7024,7 +6840,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<iframe id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</iframe>"
+    "<iframe id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</iframe>"
   )
   end()
 })
@@ -7082,7 +6898,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -7102,7 +6917,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -7135,7 +6949,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -7145,7 +6958,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<ins id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</ins>"
+    "<ins id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</ins>"
   )
   end()
 })
@@ -7164,7 +6977,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -7174,7 +6986,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<ins id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</ins>"
+    "<ins id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</ins>"
   )
   end()
 })
@@ -7232,7 +7044,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -7252,7 +7063,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -7285,7 +7095,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -7295,7 +7104,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<kbd id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</kbd>"
+    "<kbd id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</kbd>"
   )
   end()
 })
@@ -7314,7 +7123,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -7324,7 +7132,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<kbd id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</kbd>"
+    "<kbd id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</kbd>"
   )
   end()
 })
@@ -7382,7 +7190,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -7402,7 +7209,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -7435,7 +7241,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -7445,7 +7250,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<label id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</label>"
+    "<label id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</label>"
   )
   end()
 })
@@ -7464,7 +7269,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -7474,7 +7278,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<label id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</label>"
+    "<label id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</label>"
   )
   end()
 })
@@ -7532,7 +7336,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -7552,7 +7355,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -7585,7 +7387,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -7595,7 +7396,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<legend id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</legend>"
+    "<legend id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</legend>"
   )
   end()
 })
@@ -7614,7 +7415,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -7624,7 +7424,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<legend id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</legend>"
+    "<legend id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</legend>"
   )
   end()
 })
@@ -7682,7 +7482,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -7702,7 +7501,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -7735,7 +7533,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -7745,7 +7542,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<li id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</li>"
+    "<li id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</li>"
   )
   end()
 })
@@ -7764,7 +7561,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -7774,7 +7570,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<li id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</li>"
+    "<li id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</li>"
   )
   end()
 })
@@ -7832,7 +7628,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -7852,7 +7647,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -7885,7 +7679,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -7895,7 +7688,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<main id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</main>"
+    "<main id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</main>"
   )
   end()
 })
@@ -7914,7 +7707,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -7924,7 +7716,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<main id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</main>"
+    "<main id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</main>"
   )
   end()
 })
@@ -7982,7 +7774,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -8002,7 +7793,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -8035,7 +7825,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -8045,7 +7834,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<map id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</map>"
+    "<map id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</map>"
   )
   end()
 })
@@ -8064,7 +7853,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -8074,7 +7862,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<map id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</map>"
+    "<map id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</map>"
   )
   end()
 })
@@ -8132,7 +7920,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -8152,7 +7939,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -8185,7 +7971,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -8195,7 +7980,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<mark id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</mark>"
+    "<mark id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</mark>"
   )
   end()
 })
@@ -8214,7 +7999,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -8224,7 +8008,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<mark id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</mark>"
+    "<mark id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</mark>"
   )
   end()
 })
@@ -8282,7 +8066,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -8302,7 +8085,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -8335,7 +8117,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -8345,7 +8126,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<menu id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</menu>"
+    "<menu id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</menu>"
   )
   end()
 })
@@ -8364,7 +8145,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -8374,7 +8154,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<menu id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</menu>"
+    "<menu id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</menu>"
   )
   end()
 })
@@ -8432,7 +8212,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -8452,7 +8231,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -8485,7 +8263,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -8495,7 +8272,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<menuitem id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</menuitem>"
+    "<menuitem id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</menuitem>"
   )
   end()
 })
@@ -8514,7 +8291,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -8524,7 +8300,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<menuitem id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</menuitem>"
+    "<menuitem id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</menuitem>"
   )
   end()
 })
@@ -8582,7 +8358,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -8602,7 +8377,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -8635,7 +8409,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -8645,7 +8418,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<meter id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</meter>"
+    "<meter id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</meter>"
   )
   end()
 })
@@ -8664,7 +8437,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -8674,7 +8446,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<meter id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</meter>"
+    "<meter id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</meter>"
   )
   end()
 })
@@ -8732,7 +8504,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -8752,7 +8523,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -8785,7 +8555,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -8795,7 +8564,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<nav id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</nav>"
+    "<nav id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</nav>"
   )
   end()
 })
@@ -8814,7 +8583,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -8824,7 +8592,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<nav id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</nav>"
+    "<nav id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</nav>"
   )
   end()
 })
@@ -8882,7 +8650,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -8902,7 +8669,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -8935,7 +8701,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -8945,7 +8710,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<nobr id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</nobr>"
+    "<nobr id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</nobr>"
   )
   end()
 })
@@ -8964,7 +8729,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -8974,7 +8738,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<nobr id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</nobr>"
+    "<nobr id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</nobr>"
   )
   end()
 })
@@ -9032,7 +8796,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -9052,7 +8815,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -9085,7 +8847,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -9095,7 +8856,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<noframes id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</noframes>"
+    "<noframes id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</noframes>"
   )
   end()
 })
@@ -9114,7 +8875,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -9124,7 +8884,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<noframes id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</noframes>"
+    "<noframes id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</noframes>"
   )
   end()
 })
@@ -9182,7 +8942,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -9202,7 +8961,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -9235,7 +8993,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -9245,7 +9002,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<noscript id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</noscript>"
+    "<noscript id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</noscript>"
   )
   end()
 })
@@ -9264,7 +9021,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -9274,7 +9030,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<noscript id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</noscript>"
+    "<noscript id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</noscript>"
   )
   end()
 })
@@ -9332,7 +9088,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -9352,7 +9107,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -9385,7 +9139,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -9395,7 +9148,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<object id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</object>"
+    "<object id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</object>"
   )
   end()
 })
@@ -9414,7 +9167,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -9424,7 +9176,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<object id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</object>"
+    "<object id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</object>"
   )
   end()
 })
@@ -9482,7 +9234,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -9502,7 +9253,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -9535,7 +9285,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -9545,7 +9294,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<ol id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</ol>"
+    "<ol id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</ol>"
   )
   end()
 })
@@ -9564,7 +9313,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -9574,7 +9322,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<ol id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</ol>"
+    "<ol id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</ol>"
   )
   end()
 })
@@ -9632,7 +9380,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -9652,7 +9399,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -9685,7 +9431,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -9695,7 +9440,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<optgroup id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</optgroup>"
+    "<optgroup id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</optgroup>"
   )
   end()
 })
@@ -9714,7 +9459,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -9724,7 +9468,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<optgroup id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</optgroup>"
+    "<optgroup id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</optgroup>"
   )
   end()
 })
@@ -9782,7 +9526,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -9802,7 +9545,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -9835,7 +9577,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -9845,7 +9586,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<option id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</option>"
+    "<option id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</option>"
   )
   end()
 })
@@ -9864,7 +9605,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -9874,7 +9614,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<option id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</option>"
+    "<option id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</option>"
   )
   end()
 })
@@ -9932,7 +9672,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -9952,7 +9691,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -9985,7 +9723,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -9995,7 +9732,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<output id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</output>"
+    "<output id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</output>"
   )
   end()
 })
@@ -10014,7 +9751,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -10024,7 +9760,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<output id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</output>"
+    "<output id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</output>"
   )
   end()
 })
@@ -10082,7 +9818,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -10102,7 +9837,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -10135,7 +9869,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -10145,7 +9878,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<p id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</p>"
+    "<p id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</p>"
   )
   end()
 })
@@ -10164,7 +9897,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -10174,7 +9906,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<p id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</p>"
+    "<p id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</p>"
   )
   end()
 })
@@ -10232,7 +9964,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -10252,7 +9983,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -10285,7 +10015,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -10295,7 +10024,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<picture id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</picture>"
+    "<picture id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</picture>"
   )
   end()
 })
@@ -10314,7 +10043,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -10324,7 +10052,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<picture id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</picture>"
+    "<picture id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</picture>"
   )
   end()
 })
@@ -10382,7 +10110,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -10402,7 +10129,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -10435,7 +10161,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -10445,7 +10170,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<pre id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</pre>"
+    "<pre id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</pre>"
   )
   end()
 })
@@ -10464,7 +10189,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -10474,7 +10198,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<pre id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</pre>"
+    "<pre id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</pre>"
   )
   end()
 })
@@ -10532,7 +10256,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -10552,7 +10275,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -10585,7 +10307,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -10595,7 +10316,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<progress id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</progress>"
+    "<progress id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</progress>"
   )
   end()
 })
@@ -10614,7 +10335,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -10624,7 +10344,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<progress id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</progress>"
+    "<progress id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</progress>"
   )
   end()
 })
@@ -10682,7 +10402,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -10702,7 +10421,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -10735,7 +10453,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -10745,7 +10462,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<q id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</q>"
+    "<q id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</q>"
   )
   end()
 })
@@ -10764,7 +10481,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -10774,7 +10490,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<q id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</q>"
+    "<q id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</q>"
   )
   end()
 })
@@ -10832,7 +10548,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -10852,7 +10567,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -10885,7 +10599,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -10895,7 +10608,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<rp id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</rp>"
+    "<rp id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</rp>"
   )
   end()
 })
@@ -10914,7 +10627,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -10924,7 +10636,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<rp id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</rp>"
+    "<rp id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</rp>"
   )
   end()
 })
@@ -10982,7 +10694,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -11002,7 +10713,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -11035,7 +10745,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -11045,7 +10754,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<rt id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</rt>"
+    "<rt id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</rt>"
   )
   end()
 })
@@ -11064,7 +10773,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -11074,7 +10782,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<rt id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</rt>"
+    "<rt id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</rt>"
   )
   end()
 })
@@ -11132,7 +10840,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -11152,7 +10859,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -11185,7 +10891,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -11195,7 +10900,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<rtc id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</rtc>"
+    "<rtc id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</rtc>"
   )
   end()
 })
@@ -11214,7 +10919,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -11224,7 +10928,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<rtc id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</rtc>"
+    "<rtc id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</rtc>"
   )
   end()
 })
@@ -11282,7 +10986,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -11302,7 +11005,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -11335,7 +11037,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -11345,7 +11046,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<ruby id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</ruby>"
+    "<ruby id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</ruby>"
   )
   end()
 })
@@ -11364,7 +11065,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -11374,7 +11074,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<ruby id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</ruby>"
+    "<ruby id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</ruby>"
   )
   end()
 })
@@ -11432,7 +11132,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -11452,7 +11151,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -11485,7 +11183,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -11495,7 +11192,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<s id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</s>"
+    "<s id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</s>"
   )
   end()
 })
@@ -11514,7 +11211,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -11524,7 +11220,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<s id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</s>"
+    "<s id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</s>"
   )
   end()
 })
@@ -11582,7 +11278,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -11602,7 +11297,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -11635,7 +11329,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -11645,7 +11338,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<samp id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</samp>"
+    "<samp id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</samp>"
   )
   end()
 })
@@ -11664,7 +11357,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -11674,7 +11366,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<samp id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</samp>"
+    "<samp id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</samp>"
   )
   end()
 })
@@ -11732,7 +11424,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -11752,7 +11443,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -11785,7 +11475,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -11795,7 +11484,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<script id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</script>"
+    "<script id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</script>"
   )
   end()
 })
@@ -11814,7 +11503,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -11824,7 +11512,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<script id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</script>"
+    "<script id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</script>"
   )
   end()
 })
@@ -11882,7 +11570,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -11902,7 +11589,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -11935,7 +11621,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -11945,7 +11630,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<section id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</section>"
+    "<section id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</section>"
   )
   end()
 })
@@ -11964,7 +11649,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -11974,7 +11658,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<section id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</section>"
+    "<section id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</section>"
   )
   end()
 })
@@ -12032,7 +11716,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -12052,7 +11735,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -12085,7 +11767,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -12095,7 +11776,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<select id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</select>"
+    "<select id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</select>"
   )
   end()
 })
@@ -12114,7 +11795,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -12124,7 +11804,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<select id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</select>"
+    "<select id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</select>"
   )
   end()
 })
@@ -12182,7 +11862,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -12202,7 +11881,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -12235,7 +11913,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -12245,7 +11922,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<small id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</small>"
+    "<small id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</small>"
   )
   end()
 })
@@ -12264,7 +11941,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -12274,7 +11950,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<small id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</small>"
+    "<small id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</small>"
   )
   end()
 })
@@ -12332,7 +12008,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -12352,7 +12027,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -12385,7 +12059,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -12395,7 +12068,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<span id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</span>"
+    "<span id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</span>"
   )
   end()
 })
@@ -12414,7 +12087,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -12424,7 +12096,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<span id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</span>"
+    "<span id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</span>"
   )
   end()
 })
@@ -12482,7 +12154,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -12502,7 +12173,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -12535,7 +12205,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -12545,7 +12214,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<strong id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</strong>"
+    "<strong id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</strong>"
   )
   end()
 })
@@ -12564,7 +12233,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -12574,7 +12242,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<strong id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</strong>"
+    "<strong id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</strong>"
   )
   end()
 })
@@ -12632,7 +12300,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -12652,7 +12319,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -12685,7 +12351,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -12695,7 +12360,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<style id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</style>"
+    "<style id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</style>"
   )
   end()
 })
@@ -12714,7 +12379,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -12724,7 +12388,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<style id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</style>"
+    "<style id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</style>"
   )
   end()
 })
@@ -12782,7 +12446,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -12802,7 +12465,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -12835,7 +12497,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -12845,7 +12506,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<sub id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</sub>"
+    "<sub id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</sub>"
   )
   end()
 })
@@ -12864,7 +12525,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -12874,7 +12534,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<sub id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</sub>"
+    "<sub id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</sub>"
   )
   end()
 })
@@ -12932,7 +12592,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -12952,7 +12611,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -12985,7 +12643,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -12995,7 +12652,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<summary id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</summary>"
+    "<summary id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</summary>"
   )
   end()
 })
@@ -13014,7 +12671,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -13024,7 +12680,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<summary id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</summary>"
+    "<summary id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</summary>"
   )
   end()
 })
@@ -13082,7 +12738,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -13102,7 +12757,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -13135,7 +12789,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -13145,7 +12798,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<sup id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</sup>"
+    "<sup id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</sup>"
   )
   end()
 })
@@ -13164,7 +12817,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -13174,7 +12826,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<sup id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</sup>"
+    "<sup id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</sup>"
   )
   end()
 })
@@ -13232,7 +12884,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -13252,7 +12903,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -13285,7 +12935,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -13295,7 +12944,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<table id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</table>"
+    "<table id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</table>"
   )
   end()
 })
@@ -13314,7 +12963,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -13324,7 +12972,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<table id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</table>"
+    "<table id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</table>"
   )
   end()
 })
@@ -13382,7 +13030,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -13402,7 +13049,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -13435,7 +13081,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -13445,7 +13090,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<tbody id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</tbody>"
+    "<tbody id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</tbody>"
   )
   end()
 })
@@ -13464,7 +13109,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -13474,7 +13118,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<tbody id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</tbody>"
+    "<tbody id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</tbody>"
   )
   end()
 })
@@ -13532,7 +13176,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -13552,7 +13195,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -13585,7 +13227,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -13595,7 +13236,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<td id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</td>"
+    "<td id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</td>"
   )
   end()
 })
@@ -13614,7 +13255,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -13624,7 +13264,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<td id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</td>"
+    "<td id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</td>"
   )
   end()
 })
@@ -13682,7 +13322,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -13702,7 +13341,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -13735,7 +13373,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -13745,7 +13382,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<template id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</template>"
+    "<template id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</template>"
   )
   end()
 })
@@ -13764,7 +13401,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -13774,7 +13410,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<template id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</template>"
+    "<template id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</template>"
   )
   end()
 })
@@ -13832,7 +13468,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -13852,7 +13487,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -13885,7 +13519,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -13895,7 +13528,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<textarea id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</textarea>"
+    "<textarea id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</textarea>"
   )
   end()
 })
@@ -13914,7 +13547,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -13924,7 +13556,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<textarea id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</textarea>"
+    "<textarea id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</textarea>"
   )
   end()
 })
@@ -13982,7 +13614,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -14002,7 +13633,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -14035,7 +13665,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -14045,7 +13674,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<tfoot id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</tfoot>"
+    "<tfoot id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</tfoot>"
   )
   end()
 })
@@ -14064,7 +13693,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -14074,7 +13702,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<tfoot id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</tfoot>"
+    "<tfoot id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</tfoot>"
   )
   end()
 })
@@ -14132,7 +13760,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -14152,7 +13779,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -14185,7 +13811,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -14195,7 +13820,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<th id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</th>"
+    "<th id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</th>"
   )
   end()
 })
@@ -14214,7 +13839,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -14224,7 +13848,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<th id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</th>"
+    "<th id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</th>"
   )
   end()
 })
@@ -14282,7 +13906,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -14302,7 +13925,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -14335,7 +13957,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -14345,7 +13966,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<thead id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</thead>"
+    "<thead id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</thead>"
   )
   end()
 })
@@ -14364,7 +13985,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -14374,7 +13994,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<thead id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</thead>"
+    "<thead id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</thead>"
   )
   end()
 })
@@ -14432,7 +14052,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -14452,7 +14071,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -14485,7 +14103,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -14495,7 +14112,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<time id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</time>"
+    "<time id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</time>"
   )
   end()
 })
@@ -14514,7 +14131,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -14524,7 +14140,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<time id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</time>"
+    "<time id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</time>"
   )
   end()
 })
@@ -14582,7 +14198,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -14602,7 +14217,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -14635,7 +14249,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -14645,7 +14258,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<title id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</title>"
+    "<title id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</title>"
   )
   end()
 })
@@ -14664,7 +14277,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -14674,7 +14286,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<title id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</title>"
+    "<title id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</title>"
   )
   end()
 })
@@ -14732,7 +14344,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -14752,7 +14363,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -14785,7 +14395,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -14795,7 +14404,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<tr id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</tr>"
+    "<tr id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</tr>"
   )
   end()
 })
@@ -14814,7 +14423,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -14824,7 +14432,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<tr id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</tr>"
+    "<tr id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</tr>"
   )
   end()
 })
@@ -14882,7 +14490,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -14902,7 +14509,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -14935,7 +14541,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -14945,7 +14550,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<u id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</u>"
+    "<u id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</u>"
   )
   end()
 })
@@ -14964,7 +14569,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -14974,7 +14578,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<u id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</u>"
+    "<u id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</u>"
   )
   end()
 })
@@ -15032,7 +14636,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -15052,7 +14655,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -15085,7 +14687,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -15095,7 +14696,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<ul id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</ul>"
+    "<ul id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</ul>"
   )
   end()
 })
@@ -15114,7 +14715,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -15124,7 +14724,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<ul id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</ul>"
+    "<ul id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</ul>"
   )
   end()
 })
@@ -15182,7 +14782,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -15202,7 +14801,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -15235,7 +14833,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -15245,7 +14842,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<var id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</var>"
+    "<var id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</var>"
   )
   end()
 })
@@ -15264,7 +14861,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -15274,7 +14870,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<var id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</var>"
+    "<var id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</var>"
   )
   end()
 })
@@ -15332,7 +14928,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -15352,7 +14947,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -15385,7 +14979,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -15395,7 +14988,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<video id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</video>"
+    "<video id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</video>"
   )
   end()
 })
@@ -15414,7 +15007,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -15424,7 +15016,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<video id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">test</video>"
+    "<video id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">test</video>"
   )
   end()
 })
@@ -15481,7 +15073,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -15501,7 +15092,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -15533,7 +15123,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -15543,7 +15132,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<area id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
+    "<area id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
   )
   end()
 })
@@ -15561,7 +15150,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -15571,7 +15159,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<area id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">"
+    "<area id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">"
   )
   end()
 })
@@ -15629,7 +15217,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -15649,7 +15236,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -15681,7 +15267,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -15691,7 +15276,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<base id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
+    "<base id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
   )
   end()
 })
@@ -15709,7 +15294,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -15719,7 +15303,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<base id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">"
+    "<base id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">"
   )
   end()
 })
@@ -15777,7 +15361,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -15797,7 +15380,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -15829,7 +15411,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -15839,7 +15420,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<br id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
+    "<br id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
   )
   end()
 })
@@ -15857,7 +15438,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -15867,7 +15447,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<br id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">"
+    "<br id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">"
   )
   end()
 })
@@ -15925,7 +15505,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -15945,7 +15524,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -15977,7 +15555,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -15987,7 +15564,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<col id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
+    "<col id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
   )
   end()
 })
@@ -16005,7 +15582,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -16015,7 +15591,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<col id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">"
+    "<col id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">"
   )
   end()
 })
@@ -16073,7 +15649,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -16093,7 +15668,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -16125,7 +15699,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -16135,7 +15708,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<embed id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
+    "<embed id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
   )
   end()
 })
@@ -16153,7 +15726,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -16163,7 +15735,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<embed id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">"
+    "<embed id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">"
   )
   end()
 })
@@ -16221,7 +15793,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -16241,7 +15812,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -16273,7 +15843,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -16283,7 +15852,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<hr id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
+    "<hr id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
   )
   end()
 })
@@ -16301,7 +15870,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -16311,7 +15879,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<hr id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">"
+    "<hr id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">"
   )
   end()
 })
@@ -16369,7 +15937,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -16389,7 +15956,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -16421,7 +15987,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -16431,7 +15996,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<img id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
+    "<img id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
   )
   end()
 })
@@ -16449,7 +16014,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -16459,7 +16023,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<img id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">"
+    "<img id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">"
   )
   end()
 })
@@ -16517,7 +16081,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -16537,7 +16100,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -16569,7 +16131,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -16579,7 +16140,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<input id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
+    "<input id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
   )
   end()
 })
@@ -16597,7 +16158,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -16607,7 +16167,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<input id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">"
+    "<input id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">"
   )
   end()
 })
@@ -16665,7 +16225,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -16685,7 +16244,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -16717,7 +16275,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -16727,7 +16284,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<link id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
+    "<link id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
   )
   end()
 })
@@ -16745,7 +16302,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -16755,7 +16311,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<link id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">"
+    "<link id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">"
   )
   end()
 })
@@ -16813,7 +16369,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -16833,7 +16388,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -16865,7 +16419,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -16875,7 +16428,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<meta id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
+    "<meta id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
   )
   end()
 })
@@ -16893,7 +16446,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -16903,7 +16455,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<meta id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">"
+    "<meta id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">"
   )
   end()
 })
@@ -16961,7 +16513,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -16981,7 +16532,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -17013,7 +16563,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -17023,7 +16572,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<param id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
+    "<param id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
   )
   end()
 })
@@ -17041,7 +16590,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -17051,7 +16599,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<param id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">"
+    "<param id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">"
   )
   end()
 })
@@ -17109,7 +16657,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -17129,7 +16676,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -17161,7 +16707,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -17171,7 +16716,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<source id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
+    "<source id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
   )
   end()
 })
@@ -17189,7 +16734,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -17199,7 +16743,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<source id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">"
+    "<source id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">"
   )
   end()
 })
@@ -17257,7 +16801,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -17277,7 +16820,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -17309,7 +16851,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -17319,7 +16860,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<track id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
+    "<track id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
   )
   end()
 })
@@ -17337,7 +16878,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -17347,7 +16887,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<track id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">"
+    "<track id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">"
   )
   end()
 })
@@ -17405,7 +16945,6 @@ test("full", ({similar, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -17425,7 +16964,6 @@ test("full", ({similar, end}) => {
           "data-name": "Kurtis",
           "data-id": "1",
           "aria-role": "navigation",
-          "data-ds": "ds",
         },
         "props": {title: "x"},
         "style": {border: "1px"},
@@ -17457,7 +16995,6 @@ test("html", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -17467,7 +17004,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<wbr id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
+    "<wbr id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">"
   )
   end()
 })
@@ -17485,7 +17022,6 @@ test("html with plugins", ({equal, end}) => {
         id: "1",
         name: "Kurtis",
       },
-      "dataset": {ds: "ds"},
       "style": {border: "1px"},
       "on": {click: () => null},
       "aria": {role: "navigation"},
@@ -17495,7 +17031,7 @@ test("html with plugins", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<wbr id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" data-ds=\"ds\" style=\"border: 1px\">"
+    "<wbr id=\"b\" class=\"c d active\" title=\"x\" href=\"/a\" yyy=\"y\" xxx=\"x\" data-name=\"Kurtis\" data-id=\"1\" aria-role=\"navigation\" style=\"border: 1px\">"
   )
   end()
 })
