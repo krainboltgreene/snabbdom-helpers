@@ -195,8 +195,8 @@ File.write(
         same(
           #{name}(),
           {
-            "children": undefined,
-            "data": {
+            children: undefined,
+            data: {
               "attrs": {},
               "class": {},
               "hook": {},
@@ -204,10 +204,10 @@ File.write(
               "props": {},
               "style": {},
             },
-            "elm": undefined,
-            "key": undefined,
-            "sel": "#{element}",
-            "text": undefined,
+            elm: undefined,
+            key: undefined,
+            sel: "#{element}",
+            text: undefined,
           }
         )
         end()
@@ -244,7 +244,22 @@ File.write(
       })
 
       test("data", ({similar, end}) => {
-        similar(#{name}({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+        similar(
+          #{name}({
+            data: {
+              id: "1",
+              attributes: {NAME: "test"},
+            },
+          }),
+          {
+            data: {
+              attrs: {
+                "data-id": "1",
+                "data-attributes-name": "test",
+              },
+            },
+          }
+        )
         end()
       })
 
@@ -281,7 +296,7 @@ File.write(
               },
               "props": {
                 title: "x",
-                href: "/a"
+                href: "/a",
               },
               "style": {border: "1px"},
               "class": {
@@ -374,7 +389,7 @@ File.write(
             },
             "hook": {insert: () => null},
           })),
-          "<#{element} id=\\"b\\" class=\\"c d active\\" yyy=\\"y\\" xxx=\\"x\\" data-attributes-NAME=\\"Kurtis Rainbolt-Greene\\" data-id=\\"1\\" aria-role=\\"navigation\\" title=\\"x\\" href=\\"/a\\" style=\\"border: 1px\\">test</#{element}>"
+          "<#{element} id=\\"b\\" class=\\"c d active\\" yyy=\\"y\\" xxx=\\"x\\" data-id=\\"1\\" data-attributes-name=\\"Kurtis Rainbolt-Greene\\" aria-role=\\"navigation\\" title=\\"x\\" href=\\"/a\\" style=\\"border: 1px\\">test</#{element}>"
         )
         end()
       })
@@ -419,8 +434,8 @@ File.write(
         same(
           #{name}(),
           {
-            "children": undefined,
-            "data": {
+            children: undefined,
+            data: {
               "attrs": {},
               "class": {},
               "hook": {},
@@ -428,10 +443,10 @@ File.write(
               "props": {},
               "style": {},
             },
-            "elm": undefined,
-            "key": undefined,
-            "sel": "#{element}",
-            "text": undefined,
+            elm: undefined,
+            key: undefined,
+            sel: "#{element}",
+            text: undefined,
           }
         )
         end()
@@ -504,7 +519,7 @@ File.write(
               },
               "props": {
                 title: "x",
-                href: "/a"
+                href: "/a",
               },
               "style": {border: "1px"},
               "class": {

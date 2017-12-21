@@ -133,8 +133,8 @@ test("empty", ({same, end}) => {
   same(
     a(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -142,10 +142,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "a",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "a",
+      text: undefined,
     }
   )
   end()
@@ -182,7 +182,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(a({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    a({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -219,7 +234,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -312,7 +327,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<a id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</a>"
+    "<a id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</a>"
   )
   end()
 })
@@ -349,8 +364,8 @@ test("empty", ({same, end}) => {
   same(
     abbr(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -358,10 +373,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "abbr",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "abbr",
+      text: undefined,
     }
   )
   end()
@@ -398,7 +413,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(abbr({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    abbr({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -435,7 +465,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -528,7 +558,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<abbr id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</abbr>"
+    "<abbr id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</abbr>"
   )
   end()
 })
@@ -565,8 +595,8 @@ test("empty", ({same, end}) => {
   same(
     address(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -574,10 +604,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "address",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "address",
+      text: undefined,
     }
   )
   end()
@@ -614,7 +644,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(address({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    address({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -651,7 +696,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -744,7 +789,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<address id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</address>"
+    "<address id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</address>"
   )
   end()
 })
@@ -781,8 +826,8 @@ test("empty", ({same, end}) => {
   same(
     article(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -790,10 +835,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "article",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "article",
+      text: undefined,
     }
   )
   end()
@@ -830,7 +875,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(article({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    article({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -867,7 +927,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -960,7 +1020,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<article id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</article>"
+    "<article id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</article>"
   )
   end()
 })
@@ -997,8 +1057,8 @@ test("empty", ({same, end}) => {
   same(
     aside(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -1006,10 +1066,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "aside",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "aside",
+      text: undefined,
     }
   )
   end()
@@ -1046,7 +1106,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(aside({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    aside({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -1083,7 +1158,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -1176,7 +1251,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<aside id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</aside>"
+    "<aside id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</aside>"
   )
   end()
 })
@@ -1213,8 +1288,8 @@ test("empty", ({same, end}) => {
   same(
     audio(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -1222,10 +1297,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "audio",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "audio",
+      text: undefined,
     }
   )
   end()
@@ -1262,7 +1337,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(audio({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    audio({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -1299,7 +1389,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -1392,7 +1482,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<audio id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</audio>"
+    "<audio id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</audio>"
   )
   end()
 })
@@ -1429,8 +1519,8 @@ test("empty", ({same, end}) => {
   same(
     b(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -1438,10 +1528,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "b",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "b",
+      text: undefined,
     }
   )
   end()
@@ -1478,7 +1568,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(b({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    b({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -1515,7 +1620,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -1608,7 +1713,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<b id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</b>"
+    "<b id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</b>"
   )
   end()
 })
@@ -1645,8 +1750,8 @@ test("empty", ({same, end}) => {
   same(
     bdi(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -1654,10 +1759,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "bdi",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "bdi",
+      text: undefined,
     }
   )
   end()
@@ -1694,7 +1799,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(bdi({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    bdi({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -1731,7 +1851,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -1824,7 +1944,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<bdi id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</bdi>"
+    "<bdi id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</bdi>"
   )
   end()
 })
@@ -1861,8 +1981,8 @@ test("empty", ({same, end}) => {
   same(
     bdo(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -1870,10 +1990,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "bdo",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "bdo",
+      text: undefined,
     }
   )
   end()
@@ -1910,7 +2030,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(bdo({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    bdo({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -1947,7 +2082,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -2040,7 +2175,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<bdo id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</bdo>"
+    "<bdo id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</bdo>"
   )
   end()
 })
@@ -2077,8 +2212,8 @@ test("empty", ({same, end}) => {
   same(
     bgsound(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -2086,10 +2221,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "bgsound",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "bgsound",
+      text: undefined,
     }
   )
   end()
@@ -2126,7 +2261,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(bgsound({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    bgsound({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -2163,7 +2313,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -2256,7 +2406,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<bgsound id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</bgsound>"
+    "<bgsound id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</bgsound>"
   )
   end()
 })
@@ -2293,8 +2443,8 @@ test("empty", ({same, end}) => {
   same(
     blockquote(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -2302,10 +2452,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "blockquote",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "blockquote",
+      text: undefined,
     }
   )
   end()
@@ -2342,7 +2492,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(blockquote({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    blockquote({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -2379,7 +2544,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -2472,7 +2637,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<blockquote id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</blockquote>"
+    "<blockquote id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</blockquote>"
   )
   end()
 })
@@ -2509,8 +2674,8 @@ test("empty", ({same, end}) => {
   same(
     body(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -2518,10 +2683,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "body",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "body",
+      text: undefined,
     }
   )
   end()
@@ -2558,7 +2723,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(body({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    body({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -2595,7 +2775,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -2688,7 +2868,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<body id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</body>"
+    "<body id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</body>"
   )
   end()
 })
@@ -2725,8 +2905,8 @@ test("empty", ({same, end}) => {
   same(
     button(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -2734,10 +2914,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "button",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "button",
+      text: undefined,
     }
   )
   end()
@@ -2774,7 +2954,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(button({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    button({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -2811,7 +3006,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -2904,7 +3099,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<button id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</button>"
+    "<button id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</button>"
   )
   end()
 })
@@ -2941,8 +3136,8 @@ test("empty", ({same, end}) => {
   same(
     canvas(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -2950,10 +3145,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "canvas",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "canvas",
+      text: undefined,
     }
   )
   end()
@@ -2990,7 +3185,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(canvas({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    canvas({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -3027,7 +3237,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -3120,7 +3330,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<canvas id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</canvas>"
+    "<canvas id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</canvas>"
   )
   end()
 })
@@ -3157,8 +3367,8 @@ test("empty", ({same, end}) => {
   same(
     caption(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -3166,10 +3376,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "caption",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "caption",
+      text: undefined,
     }
   )
   end()
@@ -3206,7 +3416,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(caption({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    caption({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -3243,7 +3468,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -3336,7 +3561,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<caption id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</caption>"
+    "<caption id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</caption>"
   )
   end()
 })
@@ -3373,8 +3598,8 @@ test("empty", ({same, end}) => {
   same(
     cite(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -3382,10 +3607,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "cite",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "cite",
+      text: undefined,
     }
   )
   end()
@@ -3422,7 +3647,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(cite({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    cite({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -3459,7 +3699,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -3552,7 +3792,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<cite id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</cite>"
+    "<cite id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</cite>"
   )
   end()
 })
@@ -3589,8 +3829,8 @@ test("empty", ({same, end}) => {
   same(
     code(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -3598,10 +3838,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "code",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "code",
+      text: undefined,
     }
   )
   end()
@@ -3638,7 +3878,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(code({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    code({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -3675,7 +3930,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -3768,7 +4023,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<code id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</code>"
+    "<code id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</code>"
   )
   end()
 })
@@ -3805,8 +4060,8 @@ test("empty", ({same, end}) => {
   same(
     colgroup(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -3814,10 +4069,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "colgroup",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "colgroup",
+      text: undefined,
     }
   )
   end()
@@ -3854,7 +4109,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(colgroup({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    colgroup({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -3891,7 +4161,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -3984,7 +4254,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<colgroup id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</colgroup>"
+    "<colgroup id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</colgroup>"
   )
   end()
 })
@@ -4021,8 +4291,8 @@ test("empty", ({same, end}) => {
   same(
     data(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -4030,10 +4300,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "data",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "data",
+      text: undefined,
     }
   )
   end()
@@ -4070,7 +4340,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(data({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    data({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -4107,7 +4392,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -4200,7 +4485,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<data id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</data>"
+    "<data id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</data>"
   )
   end()
 })
@@ -4237,8 +4522,8 @@ test("empty", ({same, end}) => {
   same(
     datalist(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -4246,10 +4531,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "datalist",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "datalist",
+      text: undefined,
     }
   )
   end()
@@ -4286,7 +4571,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(datalist({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    datalist({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -4323,7 +4623,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -4416,7 +4716,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<datalist id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</datalist>"
+    "<datalist id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</datalist>"
   )
   end()
 })
@@ -4453,8 +4753,8 @@ test("empty", ({same, end}) => {
   same(
     dd(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -4462,10 +4762,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "dd",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "dd",
+      text: undefined,
     }
   )
   end()
@@ -4502,7 +4802,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(dd({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    dd({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -4539,7 +4854,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -4632,7 +4947,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<dd id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</dd>"
+    "<dd id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</dd>"
   )
   end()
 })
@@ -4669,8 +4984,8 @@ test("empty", ({same, end}) => {
   same(
     del(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -4678,10 +4993,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "del",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "del",
+      text: undefined,
     }
   )
   end()
@@ -4718,7 +5033,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(del({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    del({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -4755,7 +5085,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -4848,7 +5178,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<del id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</del>"
+    "<del id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</del>"
   )
   end()
 })
@@ -4885,8 +5215,8 @@ test("empty", ({same, end}) => {
   same(
     details(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -4894,10 +5224,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "details",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "details",
+      text: undefined,
     }
   )
   end()
@@ -4934,7 +5264,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(details({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    details({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -4971,7 +5316,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -5064,7 +5409,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<details id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</details>"
+    "<details id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</details>"
   )
   end()
 })
@@ -5101,8 +5446,8 @@ test("empty", ({same, end}) => {
   same(
     dfn(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -5110,10 +5455,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "dfn",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "dfn",
+      text: undefined,
     }
   )
   end()
@@ -5150,7 +5495,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(dfn({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    dfn({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -5187,7 +5547,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -5280,7 +5640,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<dfn id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</dfn>"
+    "<dfn id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</dfn>"
   )
   end()
 })
@@ -5317,8 +5677,8 @@ test("empty", ({same, end}) => {
   same(
     dir(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -5326,10 +5686,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "dir",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "dir",
+      text: undefined,
     }
   )
   end()
@@ -5366,7 +5726,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(dir({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    dir({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -5403,7 +5778,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -5496,7 +5871,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<dir id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</dir>"
+    "<dir id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</dir>"
   )
   end()
 })
@@ -5533,8 +5908,8 @@ test("empty", ({same, end}) => {
   same(
     div(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -5542,10 +5917,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "div",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "div",
+      text: undefined,
     }
   )
   end()
@@ -5582,7 +5957,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(div({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    div({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -5619,7 +6009,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -5712,7 +6102,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<div id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</div>"
+    "<div id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</div>"
   )
   end()
 })
@@ -5749,8 +6139,8 @@ test("empty", ({same, end}) => {
   same(
     dl(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -5758,10 +6148,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "dl",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "dl",
+      text: undefined,
     }
   )
   end()
@@ -5798,7 +6188,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(dl({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    dl({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -5835,7 +6240,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -5928,7 +6333,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<dl id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</dl>"
+    "<dl id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</dl>"
   )
   end()
 })
@@ -5965,8 +6370,8 @@ test("empty", ({same, end}) => {
   same(
     dt(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -5974,10 +6379,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "dt",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "dt",
+      text: undefined,
     }
   )
   end()
@@ -6014,7 +6419,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(dt({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    dt({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -6051,7 +6471,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -6144,7 +6564,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<dt id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</dt>"
+    "<dt id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</dt>"
   )
   end()
 })
@@ -6181,8 +6601,8 @@ test("empty", ({same, end}) => {
   same(
     em(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -6190,10 +6610,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "em",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "em",
+      text: undefined,
     }
   )
   end()
@@ -6230,7 +6650,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(em({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    em({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -6267,7 +6702,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -6360,7 +6795,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<em id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</em>"
+    "<em id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</em>"
   )
   end()
 })
@@ -6397,8 +6832,8 @@ test("empty", ({same, end}) => {
   same(
     fieldset(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -6406,10 +6841,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "fieldset",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "fieldset",
+      text: undefined,
     }
   )
   end()
@@ -6446,7 +6881,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(fieldset({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    fieldset({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -6483,7 +6933,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -6576,7 +7026,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<fieldset id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</fieldset>"
+    "<fieldset id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</fieldset>"
   )
   end()
 })
@@ -6613,8 +7063,8 @@ test("empty", ({same, end}) => {
   same(
     figcaption(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -6622,10 +7072,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "figcaption",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "figcaption",
+      text: undefined,
     }
   )
   end()
@@ -6662,7 +7112,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(figcaption({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    figcaption({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -6699,7 +7164,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -6792,7 +7257,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<figcaption id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</figcaption>"
+    "<figcaption id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</figcaption>"
   )
   end()
 })
@@ -6829,8 +7294,8 @@ test("empty", ({same, end}) => {
   same(
     figure(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -6838,10 +7303,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "figure",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "figure",
+      text: undefined,
     }
   )
   end()
@@ -6878,7 +7343,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(figure({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    figure({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -6915,7 +7395,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -7008,7 +7488,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<figure id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</figure>"
+    "<figure id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</figure>"
   )
   end()
 })
@@ -7045,8 +7525,8 @@ test("empty", ({same, end}) => {
   same(
     footer(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -7054,10 +7534,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "footer",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "footer",
+      text: undefined,
     }
   )
   end()
@@ -7094,7 +7574,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(footer({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    footer({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -7131,7 +7626,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -7224,7 +7719,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<footer id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</footer>"
+    "<footer id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</footer>"
   )
   end()
 })
@@ -7261,8 +7756,8 @@ test("empty", ({same, end}) => {
   same(
     form(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -7270,10 +7765,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "form",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "form",
+      text: undefined,
     }
   )
   end()
@@ -7310,7 +7805,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(form({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    form({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -7347,7 +7857,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -7440,7 +7950,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<form id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</form>"
+    "<form id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</form>"
   )
   end()
 })
@@ -7477,8 +7987,8 @@ test("empty", ({same, end}) => {
   same(
     h1(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -7486,10 +7996,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "h1",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "h1",
+      text: undefined,
     }
   )
   end()
@@ -7526,7 +8036,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(h1({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    h1({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -7563,7 +8088,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -7656,7 +8181,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<h1 id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</h1>"
+    "<h1 id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</h1>"
   )
   end()
 })
@@ -7693,8 +8218,8 @@ test("empty", ({same, end}) => {
   same(
     h2(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -7702,10 +8227,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "h2",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "h2",
+      text: undefined,
     }
   )
   end()
@@ -7742,7 +8267,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(h2({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    h2({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -7779,7 +8319,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -7872,7 +8412,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<h2 id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</h2>"
+    "<h2 id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</h2>"
   )
   end()
 })
@@ -7909,8 +8449,8 @@ test("empty", ({same, end}) => {
   same(
     h3(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -7918,10 +8458,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "h3",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "h3",
+      text: undefined,
     }
   )
   end()
@@ -7958,7 +8498,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(h3({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    h3({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -7995,7 +8550,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -8088,7 +8643,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<h3 id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</h3>"
+    "<h3 id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</h3>"
   )
   end()
 })
@@ -8125,8 +8680,8 @@ test("empty", ({same, end}) => {
   same(
     h4(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -8134,10 +8689,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "h4",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "h4",
+      text: undefined,
     }
   )
   end()
@@ -8174,7 +8729,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(h4({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    h4({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -8211,7 +8781,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -8304,7 +8874,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<h4 id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</h4>"
+    "<h4 id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</h4>"
   )
   end()
 })
@@ -8341,8 +8911,8 @@ test("empty", ({same, end}) => {
   same(
     h5(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -8350,10 +8920,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "h5",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "h5",
+      text: undefined,
     }
   )
   end()
@@ -8390,7 +8960,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(h5({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    h5({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -8427,7 +9012,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -8520,7 +9105,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<h5 id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</h5>"
+    "<h5 id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</h5>"
   )
   end()
 })
@@ -8557,8 +9142,8 @@ test("empty", ({same, end}) => {
   same(
     h6(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -8566,10 +9151,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "h6",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "h6",
+      text: undefined,
     }
   )
   end()
@@ -8606,7 +9191,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(h6({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    h6({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -8643,7 +9243,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -8736,7 +9336,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<h6 id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</h6>"
+    "<h6 id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</h6>"
   )
   end()
 })
@@ -8773,8 +9373,8 @@ test("empty", ({same, end}) => {
   same(
     head(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -8782,10 +9382,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "head",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "head",
+      text: undefined,
     }
   )
   end()
@@ -8822,7 +9422,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(head({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    head({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -8859,7 +9474,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -8952,7 +9567,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<head id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</head>"
+    "<head id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</head>"
   )
   end()
 })
@@ -8989,8 +9604,8 @@ test("empty", ({same, end}) => {
   same(
     header(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -8998,10 +9613,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "header",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "header",
+      text: undefined,
     }
   )
   end()
@@ -9038,7 +9653,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(header({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    header({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -9075,7 +9705,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -9168,7 +9798,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<header id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</header>"
+    "<header id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</header>"
   )
   end()
 })
@@ -9205,8 +9835,8 @@ test("empty", ({same, end}) => {
   same(
     hgroup(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -9214,10 +9844,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "hgroup",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "hgroup",
+      text: undefined,
     }
   )
   end()
@@ -9254,7 +9884,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(hgroup({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    hgroup({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -9291,7 +9936,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -9384,7 +10029,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<hgroup id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</hgroup>"
+    "<hgroup id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</hgroup>"
   )
   end()
 })
@@ -9421,8 +10066,8 @@ test("empty", ({same, end}) => {
   same(
     html(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -9430,10 +10075,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "html",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "html",
+      text: undefined,
     }
   )
   end()
@@ -9470,7 +10115,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(html({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    html({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -9507,7 +10167,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -9600,7 +10260,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<html id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</html>"
+    "<html id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</html>"
   )
   end()
 })
@@ -9637,8 +10297,8 @@ test("empty", ({same, end}) => {
   same(
     i(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -9646,10 +10306,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "i",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "i",
+      text: undefined,
     }
   )
   end()
@@ -9686,7 +10346,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(i({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    i({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -9723,7 +10398,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -9816,7 +10491,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<i id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</i>"
+    "<i id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</i>"
   )
   end()
 })
@@ -9853,8 +10528,8 @@ test("empty", ({same, end}) => {
   same(
     iframe(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -9862,10 +10537,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "iframe",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "iframe",
+      text: undefined,
     }
   )
   end()
@@ -9902,7 +10577,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(iframe({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    iframe({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -9939,7 +10629,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -10032,7 +10722,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<iframe id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</iframe>"
+    "<iframe id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</iframe>"
   )
   end()
 })
@@ -10069,8 +10759,8 @@ test("empty", ({same, end}) => {
   same(
     ins(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -10078,10 +10768,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "ins",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "ins",
+      text: undefined,
     }
   )
   end()
@@ -10118,7 +10808,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(ins({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    ins({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -10155,7 +10860,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -10248,7 +10953,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<ins id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</ins>"
+    "<ins id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</ins>"
   )
   end()
 })
@@ -10285,8 +10990,8 @@ test("empty", ({same, end}) => {
   same(
     kbd(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -10294,10 +10999,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "kbd",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "kbd",
+      text: undefined,
     }
   )
   end()
@@ -10334,7 +11039,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(kbd({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    kbd({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -10371,7 +11091,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -10464,7 +11184,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<kbd id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</kbd>"
+    "<kbd id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</kbd>"
   )
   end()
 })
@@ -10501,8 +11221,8 @@ test("empty", ({same, end}) => {
   same(
     label(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -10510,10 +11230,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "label",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "label",
+      text: undefined,
     }
   )
   end()
@@ -10550,7 +11270,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(label({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    label({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -10587,7 +11322,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -10680,7 +11415,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<label id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</label>"
+    "<label id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</label>"
   )
   end()
 })
@@ -10717,8 +11452,8 @@ test("empty", ({same, end}) => {
   same(
     legend(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -10726,10 +11461,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "legend",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "legend",
+      text: undefined,
     }
   )
   end()
@@ -10766,7 +11501,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(legend({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    legend({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -10803,7 +11553,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -10896,7 +11646,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<legend id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</legend>"
+    "<legend id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</legend>"
   )
   end()
 })
@@ -10933,8 +11683,8 @@ test("empty", ({same, end}) => {
   same(
     li(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -10942,10 +11692,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "li",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "li",
+      text: undefined,
     }
   )
   end()
@@ -10982,7 +11732,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(li({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    li({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -11019,7 +11784,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -11112,7 +11877,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<li id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</li>"
+    "<li id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</li>"
   )
   end()
 })
@@ -11149,8 +11914,8 @@ test("empty", ({same, end}) => {
   same(
     main(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -11158,10 +11923,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "main",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "main",
+      text: undefined,
     }
   )
   end()
@@ -11198,7 +11963,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(main({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    main({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -11235,7 +12015,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -11328,7 +12108,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<main id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</main>"
+    "<main id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</main>"
   )
   end()
 })
@@ -11365,8 +12145,8 @@ test("empty", ({same, end}) => {
   same(
     map(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -11374,10 +12154,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "map",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "map",
+      text: undefined,
     }
   )
   end()
@@ -11414,7 +12194,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(map({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    map({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -11451,7 +12246,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -11544,7 +12339,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<map id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</map>"
+    "<map id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</map>"
   )
   end()
 })
@@ -11581,8 +12376,8 @@ test("empty", ({same, end}) => {
   same(
     mark(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -11590,10 +12385,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "mark",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "mark",
+      text: undefined,
     }
   )
   end()
@@ -11630,7 +12425,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(mark({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    mark({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -11667,7 +12477,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -11760,7 +12570,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<mark id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</mark>"
+    "<mark id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</mark>"
   )
   end()
 })
@@ -11797,8 +12607,8 @@ test("empty", ({same, end}) => {
   same(
     menu(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -11806,10 +12616,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "menu",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "menu",
+      text: undefined,
     }
   )
   end()
@@ -11846,7 +12656,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(menu({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    menu({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -11883,7 +12708,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -11976,7 +12801,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<menu id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</menu>"
+    "<menu id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</menu>"
   )
   end()
 })
@@ -12013,8 +12838,8 @@ test("empty", ({same, end}) => {
   same(
     menuitem(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -12022,10 +12847,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "menuitem",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "menuitem",
+      text: undefined,
     }
   )
   end()
@@ -12062,7 +12887,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(menuitem({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    menuitem({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -12099,7 +12939,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -12192,7 +13032,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<menuitem id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</menuitem>"
+    "<menuitem id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</menuitem>"
   )
   end()
 })
@@ -12229,8 +13069,8 @@ test("empty", ({same, end}) => {
   same(
     meter(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -12238,10 +13078,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "meter",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "meter",
+      text: undefined,
     }
   )
   end()
@@ -12278,7 +13118,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(meter({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    meter({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -12315,7 +13170,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -12408,7 +13263,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<meter id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</meter>"
+    "<meter id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</meter>"
   )
   end()
 })
@@ -12445,8 +13300,8 @@ test("empty", ({same, end}) => {
   same(
     nav(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -12454,10 +13309,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "nav",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "nav",
+      text: undefined,
     }
   )
   end()
@@ -12494,7 +13349,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(nav({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    nav({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -12531,7 +13401,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -12624,7 +13494,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<nav id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</nav>"
+    "<nav id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</nav>"
   )
   end()
 })
@@ -12661,8 +13531,8 @@ test("empty", ({same, end}) => {
   same(
     nobr(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -12670,10 +13540,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "nobr",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "nobr",
+      text: undefined,
     }
   )
   end()
@@ -12710,7 +13580,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(nobr({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    nobr({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -12747,7 +13632,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -12840,7 +13725,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<nobr id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</nobr>"
+    "<nobr id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</nobr>"
   )
   end()
 })
@@ -12877,8 +13762,8 @@ test("empty", ({same, end}) => {
   same(
     noframes(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -12886,10 +13771,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "noframes",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "noframes",
+      text: undefined,
     }
   )
   end()
@@ -12926,7 +13811,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(noframes({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    noframes({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -12963,7 +13863,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -13056,7 +13956,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<noframes id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</noframes>"
+    "<noframes id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</noframes>"
   )
   end()
 })
@@ -13093,8 +13993,8 @@ test("empty", ({same, end}) => {
   same(
     noscript(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -13102,10 +14002,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "noscript",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "noscript",
+      text: undefined,
     }
   )
   end()
@@ -13142,7 +14042,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(noscript({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    noscript({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -13179,7 +14094,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -13272,7 +14187,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<noscript id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</noscript>"
+    "<noscript id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</noscript>"
   )
   end()
 })
@@ -13309,8 +14224,8 @@ test("empty", ({same, end}) => {
   same(
     object(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -13318,10 +14233,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "object",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "object",
+      text: undefined,
     }
   )
   end()
@@ -13358,7 +14273,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(object({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    object({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -13395,7 +14325,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -13488,7 +14418,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<object id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</object>"
+    "<object id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</object>"
   )
   end()
 })
@@ -13525,8 +14455,8 @@ test("empty", ({same, end}) => {
   same(
     ol(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -13534,10 +14464,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "ol",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "ol",
+      text: undefined,
     }
   )
   end()
@@ -13574,7 +14504,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(ol({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    ol({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -13611,7 +14556,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -13704,7 +14649,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<ol id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</ol>"
+    "<ol id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</ol>"
   )
   end()
 })
@@ -13741,8 +14686,8 @@ test("empty", ({same, end}) => {
   same(
     optgroup(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -13750,10 +14695,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "optgroup",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "optgroup",
+      text: undefined,
     }
   )
   end()
@@ -13790,7 +14735,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(optgroup({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    optgroup({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -13827,7 +14787,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -13920,7 +14880,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<optgroup id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</optgroup>"
+    "<optgroup id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</optgroup>"
   )
   end()
 })
@@ -13957,8 +14917,8 @@ test("empty", ({same, end}) => {
   same(
     option(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -13966,10 +14926,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "option",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "option",
+      text: undefined,
     }
   )
   end()
@@ -14006,7 +14966,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(option({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    option({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -14043,7 +15018,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -14136,7 +15111,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<option id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</option>"
+    "<option id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</option>"
   )
   end()
 })
@@ -14173,8 +15148,8 @@ test("empty", ({same, end}) => {
   same(
     output(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -14182,10 +15157,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "output",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "output",
+      text: undefined,
     }
   )
   end()
@@ -14222,7 +15197,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(output({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    output({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -14259,7 +15249,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -14352,7 +15342,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<output id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</output>"
+    "<output id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</output>"
   )
   end()
 })
@@ -14389,8 +15379,8 @@ test("empty", ({same, end}) => {
   same(
     p(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -14398,10 +15388,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "p",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "p",
+      text: undefined,
     }
   )
   end()
@@ -14438,7 +15428,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(p({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    p({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -14475,7 +15480,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -14568,7 +15573,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<p id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</p>"
+    "<p id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</p>"
   )
   end()
 })
@@ -14605,8 +15610,8 @@ test("empty", ({same, end}) => {
   same(
     picture(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -14614,10 +15619,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "picture",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "picture",
+      text: undefined,
     }
   )
   end()
@@ -14654,7 +15659,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(picture({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    picture({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -14691,7 +15711,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -14784,7 +15804,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<picture id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</picture>"
+    "<picture id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</picture>"
   )
   end()
 })
@@ -14821,8 +15841,8 @@ test("empty", ({same, end}) => {
   same(
     pre(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -14830,10 +15850,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "pre",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "pre",
+      text: undefined,
     }
   )
   end()
@@ -14870,7 +15890,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(pre({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    pre({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -14907,7 +15942,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -15000,7 +16035,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<pre id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</pre>"
+    "<pre id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</pre>"
   )
   end()
 })
@@ -15037,8 +16072,8 @@ test("empty", ({same, end}) => {
   same(
     progress(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -15046,10 +16081,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "progress",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "progress",
+      text: undefined,
     }
   )
   end()
@@ -15086,7 +16121,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(progress({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    progress({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -15123,7 +16173,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -15216,7 +16266,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<progress id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</progress>"
+    "<progress id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</progress>"
   )
   end()
 })
@@ -15253,8 +16303,8 @@ test("empty", ({same, end}) => {
   same(
     q(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -15262,10 +16312,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "q",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "q",
+      text: undefined,
     }
   )
   end()
@@ -15302,7 +16352,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(q({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    q({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -15339,7 +16404,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -15432,7 +16497,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<q id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</q>"
+    "<q id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</q>"
   )
   end()
 })
@@ -15469,8 +16534,8 @@ test("empty", ({same, end}) => {
   same(
     rp(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -15478,10 +16543,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "rp",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "rp",
+      text: undefined,
     }
   )
   end()
@@ -15518,7 +16583,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(rp({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    rp({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -15555,7 +16635,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -15648,7 +16728,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<rp id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</rp>"
+    "<rp id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</rp>"
   )
   end()
 })
@@ -15685,8 +16765,8 @@ test("empty", ({same, end}) => {
   same(
     rt(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -15694,10 +16774,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "rt",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "rt",
+      text: undefined,
     }
   )
   end()
@@ -15734,7 +16814,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(rt({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    rt({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -15771,7 +16866,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -15864,7 +16959,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<rt id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</rt>"
+    "<rt id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</rt>"
   )
   end()
 })
@@ -15901,8 +16996,8 @@ test("empty", ({same, end}) => {
   same(
     rtc(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -15910,10 +17005,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "rtc",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "rtc",
+      text: undefined,
     }
   )
   end()
@@ -15950,7 +17045,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(rtc({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    rtc({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -15987,7 +17097,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -16080,7 +17190,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<rtc id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</rtc>"
+    "<rtc id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</rtc>"
   )
   end()
 })
@@ -16117,8 +17227,8 @@ test("empty", ({same, end}) => {
   same(
     ruby(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -16126,10 +17236,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "ruby",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "ruby",
+      text: undefined,
     }
   )
   end()
@@ -16166,7 +17276,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(ruby({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    ruby({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -16203,7 +17328,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -16296,7 +17421,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<ruby id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</ruby>"
+    "<ruby id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</ruby>"
   )
   end()
 })
@@ -16333,8 +17458,8 @@ test("empty", ({same, end}) => {
   same(
     s(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -16342,10 +17467,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "s",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "s",
+      text: undefined,
     }
   )
   end()
@@ -16382,7 +17507,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(s({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    s({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -16419,7 +17559,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -16512,7 +17652,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<s id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</s>"
+    "<s id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</s>"
   )
   end()
 })
@@ -16549,8 +17689,8 @@ test("empty", ({same, end}) => {
   same(
     samp(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -16558,10 +17698,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "samp",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "samp",
+      text: undefined,
     }
   )
   end()
@@ -16598,7 +17738,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(samp({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    samp({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -16635,7 +17790,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -16728,7 +17883,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<samp id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</samp>"
+    "<samp id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</samp>"
   )
   end()
 })
@@ -16765,8 +17920,8 @@ test("empty", ({same, end}) => {
   same(
     script(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -16774,10 +17929,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "script",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "script",
+      text: undefined,
     }
   )
   end()
@@ -16814,7 +17969,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(script({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    script({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -16851,7 +18021,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -16944,7 +18114,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<script id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</script>"
+    "<script id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</script>"
   )
   end()
 })
@@ -16981,8 +18151,8 @@ test("empty", ({same, end}) => {
   same(
     section(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -16990,10 +18160,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "section",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "section",
+      text: undefined,
     }
   )
   end()
@@ -17030,7 +18200,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(section({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    section({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -17067,7 +18252,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -17160,7 +18345,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<section id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</section>"
+    "<section id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</section>"
   )
   end()
 })
@@ -17197,8 +18382,8 @@ test("empty", ({same, end}) => {
   same(
     select(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -17206,10 +18391,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "select",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "select",
+      text: undefined,
     }
   )
   end()
@@ -17246,7 +18431,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(select({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    select({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -17283,7 +18483,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -17376,7 +18576,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<select id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</select>"
+    "<select id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</select>"
   )
   end()
 })
@@ -17413,8 +18613,8 @@ test("empty", ({same, end}) => {
   same(
     small(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -17422,10 +18622,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "small",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "small",
+      text: undefined,
     }
   )
   end()
@@ -17462,7 +18662,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(small({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    small({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -17499,7 +18714,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -17592,7 +18807,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<small id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</small>"
+    "<small id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</small>"
   )
   end()
 })
@@ -17629,8 +18844,8 @@ test("empty", ({same, end}) => {
   same(
     span(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -17638,10 +18853,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "span",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "span",
+      text: undefined,
     }
   )
   end()
@@ -17678,7 +18893,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(span({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    span({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -17715,7 +18945,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -17808,7 +19038,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<span id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</span>"
+    "<span id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</span>"
   )
   end()
 })
@@ -17845,8 +19075,8 @@ test("empty", ({same, end}) => {
   same(
     strong(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -17854,10 +19084,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "strong",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "strong",
+      text: undefined,
     }
   )
   end()
@@ -17894,7 +19124,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(strong({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    strong({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -17931,7 +19176,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -18024,7 +19269,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<strong id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</strong>"
+    "<strong id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</strong>"
   )
   end()
 })
@@ -18061,8 +19306,8 @@ test("empty", ({same, end}) => {
   same(
     style(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -18070,10 +19315,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "style",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "style",
+      text: undefined,
     }
   )
   end()
@@ -18110,7 +19355,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(style({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    style({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -18147,7 +19407,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -18240,7 +19500,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<style id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</style>"
+    "<style id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</style>"
   )
   end()
 })
@@ -18277,8 +19537,8 @@ test("empty", ({same, end}) => {
   same(
     sub(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -18286,10 +19546,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "sub",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "sub",
+      text: undefined,
     }
   )
   end()
@@ -18326,7 +19586,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(sub({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    sub({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -18363,7 +19638,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -18456,7 +19731,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<sub id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</sub>"
+    "<sub id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</sub>"
   )
   end()
 })
@@ -18493,8 +19768,8 @@ test("empty", ({same, end}) => {
   same(
     summary(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -18502,10 +19777,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "summary",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "summary",
+      text: undefined,
     }
   )
   end()
@@ -18542,7 +19817,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(summary({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    summary({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -18579,7 +19869,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -18672,7 +19962,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<summary id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</summary>"
+    "<summary id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</summary>"
   )
   end()
 })
@@ -18709,8 +19999,8 @@ test("empty", ({same, end}) => {
   same(
     sup(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -18718,10 +20008,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "sup",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "sup",
+      text: undefined,
     }
   )
   end()
@@ -18758,7 +20048,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(sup({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    sup({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -18795,7 +20100,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -18888,7 +20193,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<sup id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</sup>"
+    "<sup id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</sup>"
   )
   end()
 })
@@ -18925,8 +20230,8 @@ test("empty", ({same, end}) => {
   same(
     table(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -18934,10 +20239,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "table",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "table",
+      text: undefined,
     }
   )
   end()
@@ -18974,7 +20279,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(table({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    table({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -19011,7 +20331,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -19104,7 +20424,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<table id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</table>"
+    "<table id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</table>"
   )
   end()
 })
@@ -19141,8 +20461,8 @@ test("empty", ({same, end}) => {
   same(
     tbody(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -19150,10 +20470,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "tbody",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "tbody",
+      text: undefined,
     }
   )
   end()
@@ -19190,7 +20510,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(tbody({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    tbody({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -19227,7 +20562,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -19320,7 +20655,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<tbody id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</tbody>"
+    "<tbody id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</tbody>"
   )
   end()
 })
@@ -19357,8 +20692,8 @@ test("empty", ({same, end}) => {
   same(
     td(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -19366,10 +20701,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "td",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "td",
+      text: undefined,
     }
   )
   end()
@@ -19406,7 +20741,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(td({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    td({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -19443,7 +20793,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -19536,7 +20886,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<td id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</td>"
+    "<td id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</td>"
   )
   end()
 })
@@ -19573,8 +20923,8 @@ test("empty", ({same, end}) => {
   same(
     template(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -19582,10 +20932,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "template",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "template",
+      text: undefined,
     }
   )
   end()
@@ -19622,7 +20972,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(template({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    template({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -19659,7 +21024,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -19752,7 +21117,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<template id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</template>"
+    "<template id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</template>"
   )
   end()
 })
@@ -19789,8 +21154,8 @@ test("empty", ({same, end}) => {
   same(
     textarea(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -19798,10 +21163,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "textarea",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "textarea",
+      text: undefined,
     }
   )
   end()
@@ -19838,7 +21203,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(textarea({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    textarea({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -19875,7 +21255,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -19968,7 +21348,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<textarea id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</textarea>"
+    "<textarea id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</textarea>"
   )
   end()
 })
@@ -20005,8 +21385,8 @@ test("empty", ({same, end}) => {
   same(
     tfoot(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -20014,10 +21394,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "tfoot",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "tfoot",
+      text: undefined,
     }
   )
   end()
@@ -20054,7 +21434,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(tfoot({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    tfoot({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -20091,7 +21486,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -20184,7 +21579,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<tfoot id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</tfoot>"
+    "<tfoot id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</tfoot>"
   )
   end()
 })
@@ -20221,8 +21616,8 @@ test("empty", ({same, end}) => {
   same(
     th(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -20230,10 +21625,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "th",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "th",
+      text: undefined,
     }
   )
   end()
@@ -20270,7 +21665,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(th({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    th({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -20307,7 +21717,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -20400,7 +21810,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<th id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</th>"
+    "<th id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</th>"
   )
   end()
 })
@@ -20437,8 +21847,8 @@ test("empty", ({same, end}) => {
   same(
     thead(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -20446,10 +21856,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "thead",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "thead",
+      text: undefined,
     }
   )
   end()
@@ -20486,7 +21896,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(thead({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    thead({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -20523,7 +21948,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -20616,7 +22041,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<thead id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</thead>"
+    "<thead id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</thead>"
   )
   end()
 })
@@ -20653,8 +22078,8 @@ test("empty", ({same, end}) => {
   same(
     time(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -20662,10 +22087,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "time",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "time",
+      text: undefined,
     }
   )
   end()
@@ -20702,7 +22127,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(time({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    time({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -20739,7 +22179,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -20832,7 +22272,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<time id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</time>"
+    "<time id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</time>"
   )
   end()
 })
@@ -20869,8 +22309,8 @@ test("empty", ({same, end}) => {
   same(
     title(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -20878,10 +22318,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "title",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "title",
+      text: undefined,
     }
   )
   end()
@@ -20918,7 +22358,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(title({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    title({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -20955,7 +22410,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -21048,7 +22503,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<title id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</title>"
+    "<title id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</title>"
   )
   end()
 })
@@ -21085,8 +22540,8 @@ test("empty", ({same, end}) => {
   same(
     tr(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -21094,10 +22549,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "tr",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "tr",
+      text: undefined,
     }
   )
   end()
@@ -21134,7 +22589,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(tr({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    tr({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -21171,7 +22641,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -21264,7 +22734,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<tr id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</tr>"
+    "<tr id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</tr>"
   )
   end()
 })
@@ -21301,8 +22771,8 @@ test("empty", ({same, end}) => {
   same(
     u(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -21310,10 +22780,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "u",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "u",
+      text: undefined,
     }
   )
   end()
@@ -21350,7 +22820,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(u({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    u({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -21387,7 +22872,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -21480,7 +22965,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<u id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</u>"
+    "<u id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</u>"
   )
   end()
 })
@@ -21517,8 +23002,8 @@ test("empty", ({same, end}) => {
   same(
     ul(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -21526,10 +23011,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "ul",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "ul",
+      text: undefined,
     }
   )
   end()
@@ -21566,7 +23051,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(ul({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    ul({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -21603,7 +23103,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -21696,7 +23196,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<ul id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</ul>"
+    "<ul id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</ul>"
   )
   end()
 })
@@ -21733,8 +23233,8 @@ test("empty", ({same, end}) => {
   same(
     _var(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -21742,10 +23242,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "var",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "var",
+      text: undefined,
     }
   )
   end()
@@ -21782,7 +23282,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(_var({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    _var({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -21819,7 +23334,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -21912,7 +23427,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<var id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</var>"
+    "<var id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</var>"
   )
   end()
 })
@@ -21949,8 +23464,8 @@ test("empty", ({same, end}) => {
   same(
     video(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -21958,10 +23473,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "video",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "video",
+      text: undefined,
     }
   )
   end()
@@ -21998,7 +23513,22 @@ test("aria", ({similar, end}) => {
 })
 
 test("data", ({similar, end}) => {
-  similar(video({data: {id: "1", attributes: {NAME: "test"}}}), {data: {attrs: {"data-id": "1", "data-attributes-NAME": "test"}}})
+  similar(
+    video({
+      data: {
+        id: "1",
+        attributes: {NAME: "test"},
+      },
+    }),
+    {
+      data: {
+        attrs: {
+          "data-id": "1",
+          "data-attributes-name": "test",
+        },
+      },
+    }
+  )
   end()
 })
 
@@ -22035,7 +23565,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -22128,7 +23658,7 @@ test("html", ({equal, end}) => {
       },
       "hook": {insert: () => null},
     })),
-    "<video id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-attributes-NAME=\"Kurtis Rainbolt-Greene\" data-id=\"1\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</video>"
+    "<video id=\"b\" class=\"c d active\" yyy=\"y\" xxx=\"x\" data-id=\"1\" data-attributes-name=\"Kurtis Rainbolt-Greene\" aria-role=\"navigation\" title=\"x\" href=\"/a\" style=\"border: 1px\">test</video>"
   )
   end()
 })
@@ -22165,8 +23695,8 @@ test("empty", ({same, end}) => {
   same(
     area(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -22174,10 +23704,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "area",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "area",
+      text: undefined,
     }
   )
   end()
@@ -22250,7 +23780,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -22378,8 +23908,8 @@ test("empty", ({same, end}) => {
   same(
     base(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -22387,10 +23917,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "base",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "base",
+      text: undefined,
     }
   )
   end()
@@ -22463,7 +23993,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -22591,8 +24121,8 @@ test("empty", ({same, end}) => {
   same(
     br(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -22600,10 +24130,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "br",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "br",
+      text: undefined,
     }
   )
   end()
@@ -22676,7 +24206,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -22804,8 +24334,8 @@ test("empty", ({same, end}) => {
   same(
     col(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -22813,10 +24343,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "col",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "col",
+      text: undefined,
     }
   )
   end()
@@ -22889,7 +24419,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -23017,8 +24547,8 @@ test("empty", ({same, end}) => {
   same(
     embed(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -23026,10 +24556,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "embed",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "embed",
+      text: undefined,
     }
   )
   end()
@@ -23102,7 +24632,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -23230,8 +24760,8 @@ test("empty", ({same, end}) => {
   same(
     hr(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -23239,10 +24769,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "hr",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "hr",
+      text: undefined,
     }
   )
   end()
@@ -23315,7 +24845,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -23443,8 +24973,8 @@ test("empty", ({same, end}) => {
   same(
     img(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -23452,10 +24982,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "img",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "img",
+      text: undefined,
     }
   )
   end()
@@ -23528,7 +25058,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -23656,8 +25186,8 @@ test("empty", ({same, end}) => {
   same(
     input(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -23665,10 +25195,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "input",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "input",
+      text: undefined,
     }
   )
   end()
@@ -23741,7 +25271,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -23869,8 +25399,8 @@ test("empty", ({same, end}) => {
   same(
     link(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -23878,10 +25408,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "link",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "link",
+      text: undefined,
     }
   )
   end()
@@ -23954,7 +25484,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -24082,8 +25612,8 @@ test("empty", ({same, end}) => {
   same(
     meta(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -24091,10 +25621,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "meta",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "meta",
+      text: undefined,
     }
   )
   end()
@@ -24167,7 +25697,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -24295,8 +25825,8 @@ test("empty", ({same, end}) => {
   same(
     param(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -24304,10 +25834,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "param",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "param",
+      text: undefined,
     }
   )
   end()
@@ -24380,7 +25910,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -24508,8 +26038,8 @@ test("empty", ({same, end}) => {
   same(
     source(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -24517,10 +26047,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "source",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "source",
+      text: undefined,
     }
   )
   end()
@@ -24593,7 +26123,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -24721,8 +26251,8 @@ test("empty", ({same, end}) => {
   same(
     track(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -24730,10 +26260,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "track",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "track",
+      text: undefined,
     }
   )
   end()
@@ -24806,7 +26336,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {
@@ -24934,8 +26464,8 @@ test("empty", ({same, end}) => {
   same(
     wbr(),
     {
-      "children": undefined,
-      "data": {
+      children: undefined,
+      data: {
         "attrs": {},
         "class": {},
         "hook": {},
@@ -24943,10 +26473,10 @@ test("empty", ({same, end}) => {
         "props": {},
         "style": {},
       },
-      "elm": undefined,
-      "key": undefined,
-      "sel": "wbr",
-      "text": undefined,
+      elm: undefined,
+      key: undefined,
+      sel: "wbr",
+      text: undefined,
     }
   )
   end()
@@ -25019,7 +26549,7 @@ test("full without functions", ({same, end}) => {
         },
         "props": {
           title: "x",
-          href: "/a"
+          href: "/a",
         },
         "style": {border: "1px"},
         "class": {

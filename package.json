@@ -67,6 +67,7 @@
     "@unction/compact": "2.8.0",
     "@unction/flattentree": "3.3.0",
     "@unction/istype": "2.12.0",
+    "@unction/mapkeys": "3.49.0",
     "@unction/reducewithvaluekey": "5.0.0",
     "ramda": "0.25.0",
     "snabbdom": "0.7.1"
